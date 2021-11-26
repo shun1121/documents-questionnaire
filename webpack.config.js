@@ -1,4 +1,8 @@
+// {questionnaire}
 // https://qiita.com/park-jh/items/c31784c950561521d035
+// を元に
+// https://qiita.com/motch0214/items/6da3288063abed34ccb0
+// を参考にしてプロジェクト作成
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
