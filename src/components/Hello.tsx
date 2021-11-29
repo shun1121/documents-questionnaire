@@ -5,10 +5,10 @@ const Hello: React.VFC = () => {
 
   const greetingText: (date: Date) => string = (date) => {
     // ↑のstringは返り値の型？
-    const hours = 6
-    // const hours = date.getHours() + 1
+    // const hours = 6
+    const hours = date.getHours() + 1
     console.log(new Date().getHours())
-    if (4 < hours && hours < 11) {
+    if (4 < hours && hours <= 11) {
       console.log(hours)
       return "Guten Morgen!!"
     } else if (11 < hours && hours < 17) {
