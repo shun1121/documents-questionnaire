@@ -1,11 +1,11 @@
 import React from "react"
-import ReactDOM from "react-dom"
 import Checkbox from "./components/checkbox"
 import InputText from "./components/inputText"
 import QuestionnaireTitle from "./components/questionnaireTitle"
 import Questions from "./components/questions"
 import SelectBox from "./components/selectBox"
 import TableSelect from "./components/tableSelect"
+import "./App.scss"
 
 const App = () => {
   return (

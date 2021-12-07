@@ -29,6 +29,24 @@ module.exports = {
         // TypeScriptをコンパイルする
         use: "ts-loader",
       },
+      { 
+        test: /\.css?$/,
+        use: [
+          "style-loader",
+          "css-loader",
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          // js内にバンドルされているcss情報をhtmlに出力
+          "style-loader",
+          // css内でimportされているものなどをバンドル
+          "css-loader",
+          // sassをcssに変換
+          "sass-loader",
+        ]
+      }
     ],
   },
   // import文で.tsや.tsxファイルを解決するため
