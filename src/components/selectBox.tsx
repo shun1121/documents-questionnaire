@@ -3,7 +3,7 @@ import { timeOptions } from "./selectBoxOptions"
 
 const SelectBox = (props) => {
   const options = timeOptions
-  console.log(props)
+  // console.log(props)
   return (
     <>
       <select name="time">

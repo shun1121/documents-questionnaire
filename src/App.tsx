@@ -14,10 +14,11 @@ const App = () => {
       <Questions questionNum="1" />
       <TableSelect />
       <Questions questionNum="2" />
-      <Checkbox text="読む" />
+      <Checkbox />
+      {/* <Checkbox text="読む" />
       <Checkbox text="書く" />
       <Checkbox text="話す" />
-      <Checkbox text="聞く" />
+      <Checkbox text="聞く" /> */}
       <Questions questionNum="3" />
       <SelectBox time="時間" />
       <Questions questionNum="4" />
