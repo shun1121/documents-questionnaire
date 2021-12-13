@@ -1,8 +1,4 @@
-import React, {useState, useEffect} from "react"
-
-type checkboxType = {
-  checked?: boolean
-}
+import React, {useState} from "react"
 
 const Checkbox = (props) => {
   const [checkedItems, setCheckedItems] = useState(["読む"])
@@ -23,14 +19,17 @@ const Checkbox = (props) => {
   console.log(checkedItems)
   return (
     <>
-      <input type="checkbox" className="checkbox" name="checkbox" value="読む" onChange={handleChange} checked={checkedItems.includes("読む")} />
-      <span>{text}読む</span>
-      <input type="checkbox" className="checkbox" name="checkbox" value="書く" onChange={handleChange} checked={checkedItems.includes("書く")} />
-      <span>{text}書く</span>
-      <input type="checkbox" className="checkbox" name="checkbox" value="話す" onChange={handleChange} checked={checkedItems.includes("話す")} />
-      <span>{text}話す</span>
-      <input type="checkbox" className="checkbox" name="checkbox" value="聞く" onChange={handleChange} checked={checkedItems.includes("聞く")} />
-      <span>{text}聞く</span>
+      <div>
+        <input type="checkbox" className="checkbox" name="checkbox" value="読む" onChange={handleChange} checked={checkedItems.includes("読む")} />
+        <span>{text}読む</span>
+        <input type="checkbox" className="checkbox" name="checkbox" value="書く" onChange={handleChange} checked={checkedItems.includes("書く")} />
+        <span>{text}書く</span>
+        <input type="checkbox" className="checkbox" name="checkbox" value="話す" onChange={handleChange} checked={checkedItems.includes("話す")} />
+        <span>{text}話す</span>
+        <input type="checkbox" className="checkbox" name="checkbox" value="聞く" onChange={handleChange} checked={checkedItems.includes("聞く")} />
+        <span>{text}聞く</span>
+      </div>
+      <p>{checkedItems.join(', ')}</p>
     </>
   )
 }

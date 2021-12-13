@@ -4,6 +4,7 @@ import { timeOptions } from "./selectBoxOptions"
 const SelectBox = (props) => {
   const options = timeOptions
   // console.log(props)
+  console.log(options[0][0])
   return (
     <>
       <select name="time">
