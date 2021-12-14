@@ -12,9 +12,8 @@ const TestCheckbox = () => {
     });
     setVal(newVal);
   };
-  console.log(Object.keys(val).filter(item => console.log(item)))
   // ↓ val[item]はbooleanであり、値がtrueのもの（そのキー）だけで新しい配列を作る。
-  console.log(Object.keys(val).filter(item => val[item]).join(', '))
+  // console.log(Object.keys(val).filter(item => val[item]).join(', '))
 
   return (
     <>

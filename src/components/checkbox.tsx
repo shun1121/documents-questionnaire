@@ -1,10 +1,9 @@
 import React, {useState} from "react"
 
 const Checkbox = () => {
-  const [checkedItems, setCheckedItems] = useState(["読む"])
+  const [checkedItems, setCheckedItems] = useState([])
 
   const handleChange = (e: any) => {
-    console.log(e.target.value)
     // checkboxでon、off切り替えをして保持する値を変えたい
     if (checkedItems.includes(e.target.value)) {
       // 合致するもの以外のitemで新たに配列を作成

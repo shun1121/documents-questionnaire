@@ -13,7 +13,7 @@ const SelectBox = (props) => {
   return (
     <>
       <select name="time" value={selectValue} onChange={handleChange}>
-        <option value="" hidden>時間を選択してください。</option>
+        <option hidden>時間を選択してください。</option>
         {options.map((option) => (
           <option key={option[0]} value={option[1]}>
             {option[1]}

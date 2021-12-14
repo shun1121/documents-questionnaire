@@ -1,73 +1,41 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import TableRow from "./tableRow"
 import "../App.scss"
 
-type label = {
-  for?: string
-  class?: string
-}
-type Q1 = {
-  value?: string
-  id?: string
-}
-
 const TableSelect = () => {
-  const [value1, setValue1] = useState([])
-  const [value2, setValue2] = useState([])
-  const [value3, setValue3] = useState([])
-  const [value4, setValue4] = useState([])
+  const [results, setResults] = useState([])
 
-  useEffect(() => {
-    const Q1 = document.getElementsByName('q1')[0] as Q1
-    const id = document.getElementsByClassName('1')[0]
-    console.log(Q1.value)
-    console.log(id.className)
-  },[])
-
-  const handleInputChange1 = (event: any) => {
-    const inputValue = event.target.value
-    const id = document.getElementsByClassName('1')[0]
-    const option: any = {
-      id: id.className,
-      value: inputValue
+  const handleInputChange = (event: any) => {
+    const checkedValue = event.target.value
+    const questionNum = event.target.name[1]
+    const questionResults = document.getElementsByClassName(questionNum)[0]
+    const result: any = {
+      id: questionResults.className,
+      value: checkedValue
     }
-    setValue1(option)
+    const resultKeys = Object.keys(results)
+    const resultKeyNum = resultKeys.map(val => Number(val))
+    const resultId = resultKeyNum.map(num => num+1)
+
+    if (Object.keys(resultId).includes(result.id)) {
+      const ChangeRadioBtn = results.map(result => {
+        if (result.id === questionNum) {
+          // 該当のresultオブジェクトを展開し、新しいidとvalueを代入する）
+          return {
+            ...result,
+            id: questionResults.className,
+            value: checkedValue
+          }
+        }
+        return result
+      })
+      setResults(ChangeRadioBtn)
+    } else {
+      setResults([...results, result])
+    }
   }
-  console.log(value1)
+  console.log(results)
   
-  const handleInputChange2 = (event: any) => {
-    const inputValue = event.target.value
-    const id = document.getElementsByClassName('2')[0]
-    const option: any = {
-      id: id.className,
-      value: inputValue
-    }
-    setValue2(option)
-  }
-  console.log(value2)
-
-  const handleInputChange3 = (event: any) => {
-    const inputValue = event.target.value
-    const id = document.getElementsByClassName('3')[0]
-    const option: any = {
-      id: id.className,
-      value: inputValue
-    }
-    setValue3(option)
-  }
-  console.log(value3)
-
-  const handleInputChange4 = (event: any) => {
-    const inputValue = event.target.value
-    const id = document.getElementsByClassName('4')[0]
-    const option: any = {
-      id: id.className,
-      value: inputValue
-    }
-    setValue4(option)
-  }
-  console.log(value4)
-
   return (
     <>
       <table
@@ -89,31 +57,31 @@ const TableSelect = () => {
         <tbody>
           <tr className="1">
             <td style={{ border: "1px black solid" }}>朝ごはんは食べなくてもいい</td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="とても同意" id="a1" onChange={handleInputChange1} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="少し同意" id="a2" onChange={handleInputChange1} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="あまり同意しない" id="a3" onChange={handleInputChange1} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="全く同意しない" id="a4" onChange={handleInputChange1} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="とても同意" id="a1" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="少し同意" id="a2" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="あまり同意しない" id="a3" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q1" value="全く同意しない" id="a4" onChange={handleInputChange} /></td>
           </tr>
           <tr className="2">
-            <td style={{ border: "1px black solid" }}><label htmlFor="bb" className="label2">2</label>昼ごはんは食べなくてもいい</td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="とても同意" onChange={handleInputChange2} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="少し同意" onChange={handleInputChange2} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="あまり同意しない" onChange={handleInputChange2} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="全く同意しない" onChange={handleInputChange2} /></td>
+            <td style={{ border: "1px black solid" }}>昼ごはんは食べなくてもいい</td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="とても同意" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="少し同意" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="あまり同意しない" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q2" value="全く同意しない" onChange={handleInputChange} /></td>
           </tr>
           <tr className="3">
             <td style={{ border: "1px black solid" }}>晩ごはんは食べなくてもいい</td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="とても同意" onChange={handleInputChange3} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="少し同意" onChange={handleInputChange3} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="あまり同意しない" onChange={handleInputChange3} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="全く同意しない" onChange={handleInputChange3} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="とても同意" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="少し同意" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="あまり同意しない" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q3" value="全く同意しない" onChange={handleInputChange} /></td>
           </tr>
           <tr className="4">
             <td style={{ border: "1px black solid" }}>夜ごはんは食べなくてもいい</td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="とても同意" onChange={handleInputChange4} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="少し同意" onChange={handleInputChange4} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="あまり同意しない" onChange={handleInputChange4} /></td>
-            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="全く同意しない" onChange={handleInputChange4} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="とても同意" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="少し同意" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="あまり同意しない" onChange={handleInputChange} /></td>
+            <td style={{ border: "1px black solid" }}><input type="radio" name="q4" value="全く同意しない" onChange={handleInputChange} /></td>
           </tr>
           {/* <TableRow question="朝ごはんは食べなくてもいい" />
           <TableRow question="昼ごはんは食べなくてもいい" />
