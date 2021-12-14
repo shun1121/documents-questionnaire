@@ -1,15 +1,15 @@
 import React, {useState} from "react"
 
-const Checkbox = (props) => {
+const Checkbox = () => {
   const [checkedItems, setCheckedItems] = useState(["読む"])
-  const {text} = props
 
   const handleChange = (e: any) => {
     console.log(e.target.value)
     // checkboxでon、off切り替えをして保持する値を変えたい
     if (checkedItems.includes(e.target.value)) {
       // 合致するもの以外のitemで新たに配列を作成
-      setCheckedItems(checkedItems.filter((item: string) => item !== e.target.value))
+      const newCheckedItems = checkedItems.filter((item: string) => item !== e.target.value)
+      setCheckedItems(newCheckedItems)
     } else {
       // ↓はダメ stateを直接変更してはいけない
       // setCheckedItems(checkedItems.concat(e.target.value))
@@ -21,13 +21,13 @@ const Checkbox = (props) => {
     <>
       <div>
         <input type="checkbox" className="checkbox" name="checkbox" value="読む" onChange={handleChange} checked={checkedItems.includes("読む")} />
-        <span>{text}読む</span>
+        <span>読む</span>
         <input type="checkbox" className="checkbox" name="checkbox" value="書く" onChange={handleChange} checked={checkedItems.includes("書く")} />
-        <span>{text}書く</span>
+        <span>書く</span>
         <input type="checkbox" className="checkbox" name="checkbox" value="話す" onChange={handleChange} checked={checkedItems.includes("話す")} />
-        <span>{text}話す</span>
+        <span>話す</span>
         <input type="checkbox" className="checkbox" name="checkbox" value="聞く" onChange={handleChange} checked={checkedItems.includes("聞く")} />
-        <span>{text}聞く</span>
+        <span>聞く</span>
       </div>
       <p>{checkedItems.join(', ')}</p>
     </>
@@ -55,7 +55,7 @@ export default Checkbox
 // const Checkbox = (props) => {
 //   const [checkedItem, setCheckedItem] = useState([])
 
-//   const {text} = props
+//   const  = props
 //   const handleChange = (e: any) => {
 //     if (e.target.checked) {
 //       console.log(e.target.value)
@@ -104,8 +104,8 @@ export default Checkbox
   
 //   return (
 //     <>
-//       <input type="checkbox" className="checkbox" value={text} onChange={handleChange} />
-//       <span>{text}</span>
+//       <input type="checkbox" className="checkbox" value= onChange={handleChange} />
+//       <span></span>
 //     </>
 //   )
 // }
