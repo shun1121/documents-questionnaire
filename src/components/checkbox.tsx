@@ -1,35 +1,27 @@
-import React, {useState} from "react"
+import React, { VFC } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { checkbox, selectCheckboxItems } from "../features/questionnaire/questionnaireSlice"
 
-const Checkbox = () => {
-  const [checkedItems, setCheckedItems] = useState([])
+const Checkbox: VFC = () => {
+  const dispatch = useDispatch()
+  const checkedItems = useSelector(selectCheckboxItems)
 
   const handleChange = (e: any) => {
-    // checkboxでon、off切り替えをして保持する値を変えたい
-    if (checkedItems.includes(e.target.value)) {
-      // 合致するもの以外のitemで新たに配列を作成
-      const newCheckedItems = checkedItems.filter((item: string) => item !== e.target.value)
-      setCheckedItems(newCheckedItems)
-    } else {
-      // ↓はダメ stateを直接変更してはいけない
-      // setCheckedItems(checkedItems.concat(e.target.value))
-      setCheckedItems([...checkedItems, e.target.value])
-    }
+    const checkedVal = e.target.value
+    dispatch(checkbox(checkedVal))
   }
-  console.log(checkedItems)
   return (
-    <>
-      <div>
-        <input type="checkbox" className="checkbox" name="checkbox" value="読む" onChange={handleChange} checked={checkedItems.includes("読む")} />
-        <span>読む</span>
-        <input type="checkbox" className="checkbox" name="checkbox" value="書く" onChange={handleChange} checked={checkedItems.includes("書く")} />
-        <span>書く</span>
-        <input type="checkbox" className="checkbox" name="checkbox" value="話す" onChange={handleChange} checked={checkedItems.includes("話す")} />
-        <span>話す</span>
-        <input type="checkbox" className="checkbox" name="checkbox" value="聞く" onChange={handleChange} checked={checkedItems.includes("聞く")} />
-        <span>聞く</span>
-      </div>
-      <p>{checkedItems.join(', ')}</p>
-    </>
+    <div>
+      {/* checkedを活性化させるためには、reduxに保存した値をここで使わないといけない。 */}
+      <input type="checkbox" className="checkbox" name="checkbox" value="読む" onChange={handleChange} checked={checkedItems.includes("読む")} />
+      <span>読む</span>
+      <input type="checkbox" className="checkbox" name="checkbox" value="書く" onChange={handleChange} checked={checkedItems.includes("書く")} />
+      <span>書く</span>
+      <input type="checkbox" className="checkbox" name="checkbox" value="話す" onChange={handleChange} checked={checkedItems.includes("話す")} />
+      <span>話す</span>
+      <input type="checkbox" className="checkbox" name="checkbox" value="聞く" onChange={handleChange} checked={checkedItems.includes("聞く")} />
+      <span>聞く</span>
+    </div>
   )
 }
 

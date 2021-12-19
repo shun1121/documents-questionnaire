@@ -16,7 +16,7 @@ const initialState: QuestionnaireState = {
   result2: { id: '102', value: 'とても同意' },
   result3: { id: '103', value: 'とても同意' },
   result4: { id: '104', value: 'とても同意' },
-  checkbox: ['読む'],
+  checkbox: [],
   selectValue: '4~6',
   inputValue: '生徒が英語を「できる」と感じる授業形態を導入する'
 }
@@ -35,9 +35,18 @@ export const QuestionnaireSlice = createSlice({
       } else {
         state.result4 = action.payload
       }
+    },
+    checkbox: (state, action) => {
+      if (state.checkbox.includes(action.payload)) {
+        const filterCheckedItems = state.checkbox.filter((item: string) => item !== action.payload)
+        state.checkbox = filterCheckedItems
+      } else {
+        state.checkbox = [...state.checkbox, action.payload]
+      }
     }
   }
 })
 
-export const { checkRadio } = QuestionnaireSlice.actions
+export const { checkRadio, checkbox } = QuestionnaireSlice.actions
+export const selectCheckboxItems = (state: RootState): QuestionnaireState["checkbox"] => state.questionnaire.checkbox
 export default QuestionnaireSlice.reducer
