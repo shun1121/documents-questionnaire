@@ -6,7 +6,6 @@ import Questions from "./components/questions"
 import SelectBox from "./components/selectBox"
 import TableSelect from "./components/tableSelect"
 import "./App.scss"
-import TestCheckbox from "./components/TestCheckbox"
 
 const App = () => {
   const handleSubmit = (e) => {
@@ -23,7 +22,6 @@ const App = () => {
         <Questions questionNum="2" />
         <Checkbox />
         <Questions questionNum="3" />
-        <TestCheckbox />  
         <SelectBox time="時間" />
         <Questions questionNum="4" />
         <InputText />
