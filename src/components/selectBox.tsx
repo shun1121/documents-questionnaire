@@ -1,4 +1,4 @@
-import React, { VFC, useState } from "react"
+import React, { VFC } from "react"
 import { timeOptions } from "./selectBoxOptions"
 import { useDispatch, useSelector } from "react-redux"
 import { selectBox, selectVal } from "../features/questionnaire/questionnaireSlice"
@@ -8,17 +8,14 @@ type Props = {
 }
 
 const SelectBox: VFC<Props> = (props) => {
-  const [selectValue, setSelectValue] = useState("")
   const dispatch = useDispatch()
   const selectedValue = useSelector(selectVal)
   const options = timeOptions
 
   const handleChange = (e: any) => {
     const selectVal = e.target.value
-    setSelectValue(selectVal)
     dispatch(selectBox(selectVal))
   }
-  console.log(selectValue)
 
   return (
     <>
