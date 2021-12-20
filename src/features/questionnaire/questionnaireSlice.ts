@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store';
 
 export interface QuestionnaireState {
@@ -18,7 +18,7 @@ const initialState: QuestionnaireState = {
   result4: { id: '104', value: 'とても同意' },
   checkbox: [],
   selectValue: '',
-  inputValue: '生徒が英語を「できる」と感じる授業形態を導入する'
+  inputValue: ''
 }
 
 export const QuestionnaireSlice = createSlice({
@@ -46,11 +46,15 @@ export const QuestionnaireSlice = createSlice({
     },
     selectBox: (state, action) => {
       state.selectValue = action.payload
+    },
+    inputText: (state, action) => {
+      state.inputValue = action.payload
     }
   }
 })
 
-export const { checkRadio, checkbox, selectBox } = QuestionnaireSlice.actions
+export const { checkRadio, checkbox, selectBox, inputText } = QuestionnaireSlice.actions
 export const selectCheckboxItems = (state: RootState): QuestionnaireState["checkbox"] => state.questionnaire.checkbox
 export const selectVal = (state: RootState): QuestionnaireState["selectValue"] => state.questionnaire.selectValue
+export const storedText = (state: RootState): QuestionnaireState["inputValue"] => state.questionnaire.inputValue
 export default QuestionnaireSlice.reducer
