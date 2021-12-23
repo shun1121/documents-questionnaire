@@ -10,19 +10,19 @@ export interface QuestionnaireState {
   selectValue: string,
   inputValue: string,
   confirm: boolean,
-  // isModalOpen: boolean
+  flg: boolean
 }
 
 const initialState: QuestionnaireState = {
-  result1: { id: '101', value: 'とても同意' },
-  result2: { id: '102', value: 'とても同意' },
-  result3: { id: '103', value: 'とても同意' },
-  result4: { id: '104', value: 'とても同意' },
+  result1: { id: '', value: '' },
+  result2: { id: '', value: '' },
+  result3: { id: '', value: '' },
+  result4: { id: '', value: '' },
   checkbox: [],
   selectValue: '',
   inputValue: '',
   confirm: false,
-  // isModalOpen: true
+  flg: false
 }
 
 export const QuestionnaireSlice = createSlice({
@@ -57,13 +57,13 @@ export const QuestionnaireSlice = createSlice({
     confirmOpen: (state, action) => {
       state.confirm = action.payload
     },
-    // ModalOpen: (state, action) => {
-    //   state.isModalOpen = action.payload
-    // }
+    flgOpen: (state, action) => {
+      state.flg = action.payload
+    },
   }
 })
 
-export const { checkRadio, checkbox, selectBox, inputText, confirmOpen } = QuestionnaireSlice.actions
+export const { checkRadio, checkbox, selectBox, inputText, confirmOpen, flgOpen } = QuestionnaireSlice.actions
 export const result1 = (state: RootState): QuestionnaireState["result1"] => state.questionnaire.result1
 export const result2 = (state: RootState): QuestionnaireState["result2"] => state.questionnaire.result2
 export const result3 = (state: RootState): QuestionnaireState["result3"] => state.questionnaire.result3
@@ -72,5 +72,5 @@ export const selectCheckboxItems = (state: RootState): QuestionnaireState["check
 export const selectVal = (state: RootState): QuestionnaireState["selectValue"] => state.questionnaire.selectValue
 export const storedText = (state: RootState): QuestionnaireState["inputValue"] => state.questionnaire.inputValue
 export const confirmFlg = (state: RootState): QuestionnaireState["confirm"] => state.questionnaire.confirm
-// export const isModalOpen = (state: RootState): QuestionnaireState["isModalOpen"] => state.questionnaire.isModalOpen
+export const openFlg = (state: RootState): QuestionnaireState["flg"] => state.questionnaire.flg
 export default QuestionnaireSlice.reducer

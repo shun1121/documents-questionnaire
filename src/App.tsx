@@ -7,15 +7,46 @@ import Questions from "./components/questions"
 import SelectBox from "./components/selectBox"
 import TableSelect from "./components/tableSelect"
 import "./App.scss"
-import { confirmOpen, confirmFlg } from "./features/questionnaire/questionnaireSlice"
+import {
+  confirmOpen,
+  confirmFlg,
+  flgOpen,
+  openFlg,
+  result1,
+  result2,
+  result3,
+  result4,
+  selectCheckboxItems,
+  selectVal,
+  storedText,
+} from "./features/questionnaire/questionnaireSlice"
 import Confirm from "./components/confirm"
+import Error from "./components/error"
 
 const App: VFC = () => {
   const dispatch = useDispatch()
   const confirm = useSelector(confirmFlg)
+  const flg = useSelector(openFlg)
+  const answer1 = useSelector(result1)
+  const answer2 = useSelector(result2)
+  const answer3 = useSelector(result3)
+  const answer4 = useSelector(result4)
+  const checkbox = useSelector(selectCheckboxItems)
+  const select = useSelector(selectVal)
+  const text = useSelector(storedText)
+
+  const val1 = answer1.value
+  const val2 = answer2.value
+  const val3 = answer3.value
+  const val4 = answer4.value
   
   const handleSubmit = (e: any) => {
-    dispatch(confirmOpen(!confirm))
+    if (val1 === "" || val2 === "" || val3 === "" || val4 === "" 
+    || checkbox.length === 0 || select === "" || text === "") {
+      dispatch(flgOpen(!flg))
+    } else {
+      dispatch(confirmOpen(!confirm))
+    }
     e.preventDefault()
   }
 
@@ -38,6 +69,12 @@ const App: VFC = () => {
       {confirm ? (
         <div id="overlay">
           <Confirm />
+        </div>
+      ) : (
+      <></>)}
+      {flg ? (
+        <div id="overlay">
+          <Error />
         </div>
       ) : <></>}
     </div>
