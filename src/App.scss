@@ -14,18 +14,29 @@ h1 {
   height: 100%;
   background-color: rgba(0,0,0,0.5);
 
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
   overflow-y: scroll;
   overflow: auto;
 }
+.questionTtl {
+  padding-left: 10px;
+  text-align: left;
+}
 .content {
-  z-index:2;
-  margin: 0px auto;
-  height: auto;
+  // z-index:2;
+  // margin: 0px auto;
+  // height: 80%;
+  // width: 80%;
+  // padding: 1em;
+  // background:#fff;
+  // display: flex;
+  justify-content: center;
   width: 80%;
-  padding: 1em;
-  background:#fff;
+  background-color: white;
+  margin: auto;
+  padding: 10px;
 }
 .resultWrapper {
   display: flex;
