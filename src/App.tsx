@@ -68,15 +68,22 @@ const App: VFC = () => {
       </form>
       {confirm ? (
         <div id="overlay">
-          <Confirm />
+          {text.length <= 400 ? (
+            <Confirm />
+          ) : (
+            <Confirm excess />
+          )}
         </div>
       ) : (
-      <></>)}
+        <></>
+      )}
       {flg ? (
         <div id="overlay">
           <Error />
         </div>
-      ) : <></>}
+      ) : (
+        <></>
+      )}
     </div>
   )
 }
