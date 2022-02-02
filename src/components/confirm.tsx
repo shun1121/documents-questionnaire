@@ -11,11 +11,11 @@ import {
   storedText,
 } from "../features/questionnaire/questionnaireSlice"
 
-type PropTypes = {
+type PropType = {
   excess?: boolean;
 }
 
-const Confirm: VFC<PropTypes> = ({ excess }) => {
+const Confirm: VFC<PropType> = ({ excess }) => {
   const dispatch = useDispatch()
   const answer1 = useSelector(result1)
   const answer2 = useSelector(result2)
