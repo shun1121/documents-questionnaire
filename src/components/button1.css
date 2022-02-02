@@ -1,0 +1,15 @@
+button {
+  padding: 10px;
+}
+.button-primary {
+  color: white;
+  background-color: #1ea8fd;
+}
+.button-secondary {
+  color: black;
+  background-color: rgb(192, 186, 186);
+}
+.storybook-button {
+  /* box-shadow: 10px 10px 10px rgba(0,0,0,0.3); */
+  border-radius: 5px;
+}

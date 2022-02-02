@@ -22,6 +22,7 @@ import {
 } from "./features/questionnaire/questionnaireSlice"
 import Confirm from "./components/confirm"
 import Error from "./components/error"
+import { Button1 } from "./components/Button1"
 
 const App: VFC = () => {
   const dispatch = useDispatch()
@@ -63,8 +64,15 @@ const App: VFC = () => {
         <Questions questionNum="4" />
         <InputText />
         <div>
-          <input type="submit" value="回答状況を表示" />
+          <Button1
+            handleClick={() => {}}
+            label="回答状況を確認"
+            primary
+          />
         </div>
+        {/* <div>
+          <input type="submit" value="回答状況を表示" />
+        </div> */}
       </form>
       {confirm ? (
         <div id="overlay">
@@ -84,6 +92,23 @@ const App: VFC = () => {
       ) : (
         <></>
       )}
+      {/* <div> */}
+        {/* ↓4個のキーが入った配列 */}
+        {/* {[...Array(4).keys()].map((n) => ( */}
+          {/* <div
+          style={{
+            width: "50px",
+            height: "50px",
+            backgroundColor: "red",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+          > */}
+            {/* {n+1} */}
+          {/* </div> */}
+        {/* ))} */}
+      {/* </div> */}
     </div>
   )
 }
