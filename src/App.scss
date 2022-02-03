@@ -1,9 +1,41 @@
+html {
+  background-color: #d3d3d3;
+}
+body {
+  margin: 0px;
+}
 .App {
-  background-color: lightblue;
   text-align: center;
 }
+h1 > span {
+  background-color: white;
+  padding: 10px;
+}
 h1 {
-  color: blue;
+  padding-top: 50px;
+  height: 200px;
+  color: black;
+  margin-top: 0px;
+}
+.header {
+  width: 100%;
+  background-color: #1ca9fd;
+}
+p {
+  text-align: left;
+  font-size: 17px;
+  padding-top: 15px;
+}
+.form {
+  background-color: white;
+  margin: -120px auto 0;
+  width: 85%;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+form {
+  width: 80%;
+  margin: 0 auto;
 }
 // overlayで囲んだ内容の表示位置などを決める
 #overlay {
@@ -15,8 +47,6 @@ h1 {
   background-color: rgba(0,0,0,0.5);
 
   display: flex;
-  // align-items: center;
-  // justify-content: center;
   overflow-y: scroll;
   overflow: auto;
 }
@@ -25,13 +55,6 @@ h1 {
   text-align: left;
 }
 .content {
-  // z-index:2;
-  // margin: 0px auto;
-  // height: 80%;
-  // width: 80%;
-  // padding: 1em;
-  // background:#fff;
-  // display: flex;
   justify-content: center;
   width: 80%;
   background-color: white;

@@ -53,27 +53,33 @@ const App: VFC = () => {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
-        <QuestionnaireTitle />
-        <Questions questionNum="1" />
-        <TableSelect />
-        <Questions questionNum="2" />
-        <Checkbox />
-        <Questions questionNum="3" />
-        <SelectBox time="時間" />
-        <Questions questionNum="4" />
-        <InputText />
+      <header className="header">
         <div>
-          <Button1
-            handleClick={() => {}}
-            label="回答状況を確認"
-            primary
-          />
+          <QuestionnaireTitle />
         </div>
-        {/* <div>
-          <input type="submit" value="回答状況を表示" />
-        </div> */}
-      </form>
+      </header>
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <Questions questionNum="1" />
+          <TableSelect />
+          <Questions questionNum="2" />
+          <Checkbox />
+          <Questions questionNum="3" />
+          <SelectBox time="時間" />
+          <Questions questionNum="4" />
+          <InputText />
+          <div>
+            <Button1
+              handleClick={() => {}}
+              label="回答状況を確認"
+              primary
+            />
+          </div>
+          {/* <div>
+            <input type="submit" value="回答状況を表示" />
+          </div> */}
+        </form>
+      </div>
       {confirm ? (
         <div id="overlay">
           {text.length <= 400 ? (

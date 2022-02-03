@@ -3,19 +3,23 @@ import './checkbox1.css'
 
 interface CheckboxProps {
   color?: string;
-  label?: string;
+  value: string;
+  type: string;
+  name: string;
   fontSize?: '10px' | '15px' | '20px';
-  handleChange?: () => void;
+  handleChange: (e:any) => void;
+  checked?: boolean
 }
 
 export const Checkbox1 = ({
   color,
-  label,
   fontSize,
+  value,
   handleChange,
+  checked,
+  type="checkbox",
+  name="checkbox"
 }: CheckboxProps) => {
-  console.log(label)
-  console.log(fontSize)
   const mode = fontSize === '15px' ? 'paddingT': ''
   const labelStyle = {
     fontSize: fontSize
@@ -28,14 +32,14 @@ export const Checkbox1 = ({
   return (
     <div className="checkbox-wrap" style={style}>
       <input
-        id="sample1"
-        type="checkbox"
-        className="checkbox"
-        name="checkbox"
-        value={label}
+        id={value}
+        type={type}
+        name={name}
+        value={value}
         onChange={handleChange}
+        checked={checked}
       />
-      <label htmlFor="sample1" className={mode} style={labelStyle}>{label}</label>
+      <label htmlFor={value} className={mode} style={labelStyle}>{value}</label>
     </div>
   );
 };
