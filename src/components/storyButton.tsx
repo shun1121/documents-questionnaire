@@ -1,5 +1,5 @@
 import React from 'react';
-import './button1.css'
+import './storyButton.css'
 
 interface ButtonProps {
   primary?: boolean;
@@ -10,7 +10,7 @@ interface ButtonProps {
   handleClick?: () => void;
 }
 
-export const Button1:any = ({
+export const StoryButton:any = ({
   primary = false,
   backgroundColor,
   color,
@@ -44,7 +44,7 @@ export const Button1:any = ({
   );
 };
 
-export default Button1
+export default StoryButton
 
 // import React from 'react';
 // // import './button.css';

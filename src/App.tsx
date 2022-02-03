@@ -22,7 +22,7 @@ import {
 } from "./features/questionnaire/questionnaireSlice"
 import Confirm from "./components/confirm"
 import Error from "./components/error"
-import { Button1 } from "./components/Button1"
+import { StoryButton } from "./components/storyButton"
 
 const App: VFC = () => {
   const dispatch = useDispatch()
@@ -69,7 +69,7 @@ const App: VFC = () => {
           <Questions questionNum="4" />
           <InputText />
           <div>
-            <Button1
+            <StoryButton
               handleClick={() => {}}
               label="回答状況を確認"
               primary

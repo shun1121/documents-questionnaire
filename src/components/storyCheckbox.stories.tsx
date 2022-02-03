@@ -1,9 +1,9 @@
 import React from 'react';
-import { Checkbox1 } from "./checkbox1"
+import { StoryCheckbox } from "./storyCheckbox"
 
 export default {
-  title: "Components/checkbox1",
-  component: Checkbox1,
+  title: "Components/storyCheckbox",
+  component: StoryCheckbox,
   argTypes: {
     handleChange: { action: "handleChange"},
     fontSize: {
@@ -16,7 +16,7 @@ export default {
 }
 
 const Template = (args) => (
-  <Checkbox1 {...args} />
+  <StoryCheckbox {...args} />
 )
 
 export const CheckboxM = Template.bind({})
@@ -24,11 +24,15 @@ CheckboxM.args = {
   value: '読む',
   fontSize: '15px',
   color: 'black',
+  type:"checkbox",
+  name:"checkbox",
 }
 export const CheckboxS = Template.bind({})
 CheckboxS.args = {
+  checked: true,
   value: '書く',
   fontSize: '10px',
   color: '#1ea8fd',
-  checked: true
+  type:"checkbox",
+  name:"checkbox",
 }

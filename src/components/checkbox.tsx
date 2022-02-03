@@ -1,7 +1,7 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { checkbox, selectCheckboxItems } from "../features/questionnaire/questionnaireSlice"
-import { Checkbox1 } from "./checkbox1"
+import { StoryCheckbox } from "./storyCheckbox"
 
 const Checkbox: VFC = () => {
   const dispatch = useDispatch()
@@ -17,7 +17,7 @@ const Checkbox: VFC = () => {
   return (
     <div>
       <div style={{display: 'flex', justifyContent: 'center'}}>
-        <Checkbox1
+        <StoryCheckbox
           color="black"
           fontSize="15px"
           handleChange={handleChange}
@@ -26,7 +26,7 @@ const Checkbox: VFC = () => {
           value="読む"
           checked={checkedItems.includes("読む")}
         />
-        <Checkbox1
+        <StoryCheckbox
           color="black"
           fontSize="15px"
           type="checkbox"
@@ -35,7 +35,7 @@ const Checkbox: VFC = () => {
           value="書く"
           checked={checkedItems.includes("書く")}
         />
-        <Checkbox1
+        <StoryCheckbox
           color="black"
           fontSize="15px"
           type="checkbox"
@@ -44,7 +44,7 @@ const Checkbox: VFC = () => {
           value="話す"
           checked={checkedItems.includes("話す")}
         />
-        <Checkbox1
+        <StoryCheckbox
           color="black"
           fontSize="15px"
           type="checkbox"

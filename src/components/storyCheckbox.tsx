@@ -1,24 +1,24 @@
 import React from 'react';
-import './checkbox1.css'
+import './storyCheckbox.css'
 
 interface CheckboxProps {
   color?: string;
-  value: string;
   type: string;
   name: string;
+  value: string;
   fontSize?: '10px' | '15px' | '20px';
-  handleChange: (e:any) => void;
   checked?: boolean
+  handleChange: (e:any) => void;
 }
 
-export const Checkbox1 = ({
+export const StoryCheckbox = ({
   color,
-  fontSize,
+  type,
+  name,
   value,
-  handleChange,
+  fontSize,
   checked,
-  type="checkbox",
-  name="checkbox"
+  handleChange,
 }: CheckboxProps) => {
   const mode = fontSize === '15px' ? 'paddingT': ''
   const labelStyle = {
@@ -36,10 +36,15 @@ export const Checkbox1 = ({
         type={type}
         name={name}
         value={value}
-        onChange={handleChange}
         checked={checked}
+        onChange={handleChange}
       />
-      <label htmlFor={value} className={mode} style={labelStyle}>{value}</label>
+      <label htmlFor={value}
+        className={mode}
+        style={labelStyle}
+      >
+        {value}
+      </label>
     </div>
   );
 };
