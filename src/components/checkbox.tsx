@@ -1,6 +1,7 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { checkbox, selectCheckboxItems } from "../features/questionnaire/questionnaireSlice"
+import { StoryCheckbox } from "./StoryCheckbox"
 
 const Checkbox: VFC = () => {
   const dispatch = useDispatch()
@@ -8,19 +9,50 @@ const Checkbox: VFC = () => {
 
   const handleChange = (e: any) => {
     const checkedVal = e.target.value
+    console.log(e.target)
+    console.log(checkedVal)
     dispatch(checkbox(checkedVal))
   }
   return (
     <div>
-      {/* checkedを活性化させるためには、reduxに保存した値をここで使わないといけない。 */}
-      <input type="checkbox" className="checkbox" name="checkbox" value="読む" onChange={handleChange} checked={checkedItems.includes("読む")} />
-      <span>読む</span>
-      <input type="checkbox" className="checkbox" name="checkbox" value="書く" onChange={handleChange} checked={checkedItems.includes("書く")} />
-      <span>書く</span>
-      <input type="checkbox" className="checkbox" name="checkbox" value="話す" onChange={handleChange} checked={checkedItems.includes("話す")} />
-      <span>話す</span>
-      <input type="checkbox" className="checkbox" name="checkbox" value="聞く" onChange={handleChange} checked={checkedItems.includes("聞く")} />
-      <span>聞く</span>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <StoryCheckbox
+          color="black"
+          fontSize="15px"
+          handleChange={handleChange}
+          type="checkbox"
+          name="checkbox"
+          value="読む"
+          checked={checkedItems.includes("読む")}
+        />
+        <StoryCheckbox
+          color="black"
+          fontSize="15px"
+          type="checkbox"
+          name="checkbox"
+          handleChange={handleChange}
+          value="書く"
+          checked={checkedItems.includes("書く")}
+        />
+        <StoryCheckbox
+          color="black"
+          fontSize="15px"
+          type="checkbox"
+          name="checkbox"
+          handleChange={handleChange}
+          value="話す"
+          checked={checkedItems.includes("話す")}
+        />
+        <StoryCheckbox
+          color="black"
+          fontSize="15px"
+          type="checkbox"
+          name="checkbox"
+          handleChange={handleChange}
+          value="聞く"
+          checked={checkedItems.includes("聞く")}
+        />
+      </div>
     </div>
   )
 }

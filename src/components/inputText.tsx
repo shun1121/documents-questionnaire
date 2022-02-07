@@ -1,8 +1,9 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { inputText, storedText } from "../features/questionnaire/questionnaireSlice"
+import { StoryInput } from './StoryInput'
 
-const InputText: VFC = () => {
+const InputText = () => {
   const dispatch = useDispatch()
   const text = useSelector(storedText)
 
@@ -12,9 +13,10 @@ const InputText: VFC = () => {
   }
 
   return (
-    <>
-      <textarea value={text} onChange={handleChange} />
-    </>
+    <StoryInput text={text} handleChange={handleChange} />
+    // <>
+    //   <textarea value={text} onChange={handleChange} />
+    // </>
   )
 }
 

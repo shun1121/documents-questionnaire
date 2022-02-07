@@ -10,6 +10,7 @@
   position: relative;
   padding-left: 25px;
   padding-right: 10px;
+  margin: auto 20px;
 }
 /* ラベルの左に表示させる正方形のボックス□ */
 .checkbox-wrap input[type="checkbox"]+label::before{

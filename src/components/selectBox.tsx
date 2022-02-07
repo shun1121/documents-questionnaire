@@ -2,8 +2,10 @@ import React, { VFC } from "react"
 import { timeOptions } from "./selectBoxOptions"
 import { useDispatch, useSelector } from "react-redux"
 import { selectBox, selectVal } from "../features/questionnaire/questionnaireSlice"
+import { StorySelectbox } from "./StorySelectbox"
+// import { TestStorySelectbox } from "./testSelect"
 
-type Props = {
+interface Props {
   time: string;
 }
 
@@ -19,7 +21,14 @@ const SelectBox: VFC<Props> = (props) => {
 
   return (
     <>
-      <select name="time" value={selectedValue} onChange={handleChange}>
+      <StorySelectbox
+        options={options}
+        time={props.time}
+        value={selectedValue? selectedValue : 'default'}
+        handleChange={handleChange}
+      />
+      {/* <TestStorySelectbox /> */}
+      {/* <select name="time" value={selectedValue} onChange={handleChange}>
         <option hidden>時間を選択してください。</option>
         {options.map((option) => (
           <option key={option[0]} value={option[1]}>
@@ -27,7 +36,7 @@ const SelectBox: VFC<Props> = (props) => {
           </option>
         ))}
       </select>
-      <span>{props.time}</span>
+      <span>{props.time}</span> */}
     </>
   )
 }
