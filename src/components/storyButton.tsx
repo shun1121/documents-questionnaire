@@ -1,5 +1,5 @@
 import React from 'react';
-import './StoryButton.css'
+import './storyButton.css'
 
 interface ButtonProps {
   primary?: boolean;

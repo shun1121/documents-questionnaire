@@ -1,5 +1,5 @@
 import React from 'react'
-import './StoryInput.css'
+import './storyInput.css'
 
 interface InputProps {
   text: string;

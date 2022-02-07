@@ -1,5 +1,5 @@
 import React from 'react'
-import { StorySelectbox } from './StorySelectbox'
+import { StorySelectbox } from './storySelectbox'
 import { timeOptions } from "./selectBoxOptions"
 
 export default {
