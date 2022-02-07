@@ -1,8 +1,8 @@
 import React from 'react';
-import Button1 from "./storyButton"
+import Button1 from "./StoryButton"
 
 export default {
-  title: "Components/Button1",
+  title: "components/Button1",
   component: Button1,
   argTypes: { 
     handleClick: { action: "handleClick"},

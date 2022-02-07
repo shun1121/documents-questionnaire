@@ -1,8 +1,8 @@
 import React from 'react';
-import { StoryCheckbox } from "./storyCheckbox"
+import { StoryCheckbox } from './StoryCheckbox'
 
 export default {
-  title: "Components/storyCheckbox",
+  title: "components/StoryCheckbox",
   component: StoryCheckbox,
   argTypes: {
     handleChange: { action: "handleChange"},

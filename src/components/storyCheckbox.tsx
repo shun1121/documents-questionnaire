@@ -1,5 +1,5 @@
 import React from 'react';
-import './storyCheckbox.css'
+import './StoryCheckbox.css'
 
 interface CheckboxProps {
   color?: string;

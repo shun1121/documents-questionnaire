@@ -1,12 +1,11 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { checkbox, selectCheckboxItems } from "../features/questionnaire/questionnaireSlice"
-import { StoryCheckbox } from "./storyCheckbox"
+import { StoryCheckbox } from "./StoryCheckbox"
 
 const Checkbox: VFC = () => {
   const dispatch = useDispatch()
   const checkedItems = useSelector(selectCheckboxItems)
-  console.log(checkedItems)
 
   const handleChange = (e: any) => {
     const checkedVal = e.target.value
