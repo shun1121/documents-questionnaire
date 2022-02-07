@@ -1,5 +1,5 @@
 import React from 'react'
-import { StoryInput } from './StoryInput'
+import { StoryInput } from './storyInput'
 
 export default {
   title: "components/StoryInput",

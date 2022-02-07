@@ -1,7 +1,7 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { inputText, storedText } from "../features/questionnaire/questionnaireSlice"
-import { StoryInput } from './StoryInput'
+import { StoryInput } from './storyInput'
 
 const InputText = () => {
   const dispatch = useDispatch()

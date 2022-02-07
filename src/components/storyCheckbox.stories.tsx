@@ -1,5 +1,5 @@
 import React from 'react';
-import { StoryCheckbox } from './StoryCheckbox'
+import { StoryCheckbox } from './storyCheckbox'
 
 export default {
   title: "components/StoryCheckbox",

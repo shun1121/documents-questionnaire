@@ -1,6 +1,6 @@
 import React from 'react'
 // import { timeOptions } from "./selectBoxOptions"
-import './StorySelectbox.css'
+import './storySelectbox.css'
 
 interface SelectboxProps {
   value?: string;
