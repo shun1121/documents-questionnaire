@@ -68,7 +68,7 @@ const App: VFC = () => {
           <SelectBox time="時間" />
           <Questions questionNum="4" />
           <InputText />
-          <div>
+          <div className="buttonWrapper">
             <StoryButton
               handleClick={() => {}}
               label="回答状況を確認"

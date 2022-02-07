@@ -1,5 +1,5 @@
 import React from 'react'
-import './StorySelectbox.css'
+import './StoryInput.css'
 
 interface InputProps {
   text: string;
@@ -12,9 +12,8 @@ export const StoryInput = ({
 }: InputProps) => {
 
   return (
-    // <>
-    <p>aaa</p>
-    //   <textarea value={text} onChange={handleChange} />
-    // </>
+    <>
+      <textarea value={text} onChange={handleChange} />
+    </>
   )
 }

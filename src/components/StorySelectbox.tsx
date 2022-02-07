@@ -21,16 +21,18 @@ export const StorySelectbox = ({
   console.log(time)
 
   return (
-    <div>
-      <select name="time" value={value} onChange={handleChange}>
-        <option hidden>時間を選択してください。</option>
-        {options.map((option) => (
-          <option key={option[0]} value={option[1]}>
-            {option[1]}
-          </option>
-        ))}
-      </select>
-      <span>{time}</span>
+    <div className="wrapper">
+      <div className="selectbox select">
+        <select name="time" value={value} onChange={handleChange}>
+          <option hidden>時間を選択してください。</option>
+          {options.map((option) => (
+            <option key={option[0]} value={option[1]}>
+              {option[1]}
+            </option>
+          ))}
+        </select>
+      </div>
+      <p className="time">{time}</p>
     </div>
   )
 }

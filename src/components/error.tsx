@@ -11,8 +11,10 @@ const Error: VFC = () => {
 
   return (
     <div className="content">
-      <div>全ての項目を記入してください。</div>
-      <div><button onClick={flgClose}>閉じる</button></div>
+      <div className="caution">全ての項目を記入してください。</div>
+      <div className="close">
+        <button onClick={flgClose}>閉じる</button>
+      </div>
     </div>
   )
 }

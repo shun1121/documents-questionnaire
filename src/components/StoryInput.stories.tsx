@@ -10,7 +10,9 @@ export default {
 }
 
 const Template = (args) => {
-  <StoryInput {...args} />
+  return (
+   <StoryInput {...args} />
+  )
 }
 
 export const Input = Template.bind({})

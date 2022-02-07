@@ -10,9 +10,7 @@ export default {
   }
 }
 
-const Template = (args) => {
-  <StorySelectbox {...args} />
-}
+const Template = (args) => <StorySelectbox {...args} />
 
 export const Selectbox = Template.bind({})
 Selectbox.args = {

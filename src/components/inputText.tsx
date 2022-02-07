@@ -14,7 +14,6 @@ const InputText = () => {
 
   return (
     <StoryInput text={text} handleChange={handleChange} />
-    // <p>aaaa</p>
     // <>
     //   <textarea value={text} onChange={handleChange} />
     // </>
