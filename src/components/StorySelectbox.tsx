@@ -15,7 +15,6 @@ export const StorySelectbox = ({
   options=timeOptions,
   handleChange
 }: SelectboxProps) => {
-  // const options = timeOptions
   console.log(value)
 
   return (
