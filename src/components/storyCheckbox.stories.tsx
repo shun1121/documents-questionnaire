@@ -1,9 +1,12 @@
 import React from 'react';
 import { StoryCheckbox } from './storyCheckbox'
+// import { Provider } from 'react-redux';
+// import { store } from '../app/store'
 
 export default {
   title: "components/StoryCheckbox",
   component: StoryCheckbox,
+  // decorators: [story => <Provider store={store}>{story()}</Provider>],
   argTypes: {
     handleChange: { action: "handleChange"},
     fontSize: {
@@ -32,7 +35,6 @@ CheckboxS.args = {
   checked: true,
   value: '書く',
   fontSize: '10px',
-  color: '#1ea8fd',
   type:"checkbox",
   name:"checkbox",
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import Button1 from "./storyButton"
 
 export default {
-  title: "components/Button1",
+  title: "components/Button",
   component: Button1,
   argTypes: { 
     handleClick: { action: "handleClick"},
@@ -43,6 +43,6 @@ Yellow.args = {
   backgroundColor: 'yellow',
   label: '回答状況を確認',
   size: 'large',
-  color: 'grey'
+  color: 'purple'
 }
 export const Blue = () => <Button1 label="Click" backgroundColor="blue" />

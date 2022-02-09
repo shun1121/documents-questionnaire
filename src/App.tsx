@@ -75,9 +75,6 @@ const App: VFC = () => {
               primary
             />
           </div>
-          {/* <div>
-            <input type="submit" value="回答状況を表示" />
-          </div> */}
         </form>
       </div>
       {confirm ? (
@@ -98,23 +95,6 @@ const App: VFC = () => {
       ) : (
         <></>
       )}
-      {/* <div> */}
-        {/* ↓4個のキーが入った配列 */}
-        {/* {[...Array(4).keys()].map((n) => ( */}
-          {/* <div
-          style={{
-            width: "50px",
-            height: "50px",
-            backgroundColor: "red",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-          > */}
-            {/* {n+1} */}
-          {/* </div> */}
-        {/* ))} */}
-      {/* </div> */}
     </div>
   )
 }

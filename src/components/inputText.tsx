@@ -3,20 +3,17 @@ import { useDispatch, useSelector } from "react-redux"
 import { inputText, storedText } from "../features/questionnaire/questionnaireSlice"
 import { StoryInput } from './storyInput'
 
-const InputText = () => {
+const InputText: VFC = () => {
   const dispatch = useDispatch()
   const text = useSelector(storedText)
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const inputValue = e.target.value
     dispatch(inputText(inputValue))
   }
 
   return (
     <StoryInput text={text} handleChange={handleChange} />
-    // <>
-    //   <textarea value={text} onChange={handleChange} />
-    // </>
   )
 }
 
