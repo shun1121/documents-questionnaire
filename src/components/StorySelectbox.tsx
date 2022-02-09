@@ -1,32 +1,30 @@
 import React from 'react'
-// import { timeOptions } from "./selectBoxOptions"
+import { timeOptions } from "./selectBoxOptions"
 import './storySelectbox.css'
 
 interface SelectboxProps {
   value?: string;
   time?: string;
   options: (string | number)[][];
-  handleChange: (e:any) => void;
+  handleChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 export const StorySelectbox = ({
   value='default',
   time,
-  options,
+  options=timeOptions,
   handleChange
 }: SelectboxProps) => {
   // const options = timeOptions
-  console.log(options)
   console.log(value)
-  console.log(time)
 
   return (
     <div className="wrapper">
       <div className="selectbox select">
-        <select name="time" value={value} onChange={handleChange}>
+        <select name="time" onChange={handleChange}>
           <option hidden>時間を選択してください。</option>
-          {options.map((option) => (
-            <option key={option[0]} value={option[1]}>
+          {options.map((option, i) => (
+            <option key={i} value={option[1]}>
               {option[1]}
             </option>
           ))}

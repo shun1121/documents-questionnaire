@@ -8,7 +8,7 @@ interface CheckboxProps {
   value: string;
   fontSize?: '10px' | '15px' | '20px';
   checked?: boolean
-  handleChange: (e:any) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const StoryCheckbox = ({

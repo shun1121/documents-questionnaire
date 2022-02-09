@@ -10,7 +10,7 @@ interface ButtonProps {
   handleClick?: () => void;
 }
 
-export const StoryButton:any = ({
+export const StoryButton = ({
   primary = false,
   backgroundColor,
   color,

@@ -10,12 +10,17 @@ export default {
 }
 
 const Template = (args) => {
+  console.log(args)
   return (
    <StoryInput {...args} />
   )
 }
 
+export const Default = Template.bind({})
+Default.args = {
+  value: '',
+}
 export const Input = Template.bind({})
 Input.args = {
-  // text: "こんにちは",
+  text: "😂💁emojiいいね",
 }
