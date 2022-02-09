@@ -22,7 +22,7 @@ import {
 } from "./features/questionnaire/questionnaireSlice"
 import Confirm from "./components/confirm"
 import Error from "./components/error"
-import { StoryButton } from "./components/StoryButton"
+import { StoryButton } from "./components/storyButton"
 
 const App: VFC = () => {
   const dispatch = useDispatch()

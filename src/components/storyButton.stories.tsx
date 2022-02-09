@@ -24,25 +24,25 @@ Primary.args = {
   primary: true,
   label: '回答状況を確認',
 }
-export const Green:any = Template.bind({})
+export const Close = Template.bind({})
+Close.args = {
+  primary: true,
+  label: '閉じる',
+  size: 'medium',
+  color: 'white'
+}
+export const Green= Template.bind({})
 Green.args = {
   backgroundColor: 'green',
   label: '回答状況を確認',
-  size: 'medium',
+  size: 'small',
   color: 'white'
 }
 export const Black = Template.bind({})
 Black.args = {
   backgroundColor: 'black',
   label: '回答状況を確認',
-  size: 'small',
-  color: 'white'
-}
-export const Yellow = Template.bind({})
-Yellow.args = {
-  backgroundColor: 'yellow',
-  label: '回答状況を確認',
   size: 'large',
-  color: 'purple'
+  color: 'white'
 }
 export const Blue = () => <Button1 label="Click" backgroundColor="blue" />
