@@ -1,7 +1,7 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { checkbox, selectCheckboxItems } from "../features/questionnaire/questionnaireSlice"
-import { StoryCheckbox } from "./StoryCheckbox"
+import { checkbox, selectCheckboxItems } from "../../features/questionnaire/questionnaireSlice"
+import { StoryCheckbox } from "./storyCheckbox"
 
 const Checkbox: VFC = () => {
   const dispatch = useDispatch()

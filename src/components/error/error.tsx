@@ -1,7 +1,7 @@
 import React, { VFC } from "react"
 import { useDispatch } from "react-redux"
-import { flgOpen } from "../features/questionnaire/questionnaireSlice"
-import { StoryButton } from "./storyButton"
+import { flgOpen } from "../../features/questionnaire/questionnaireSlice"
+import { StoryButton } from "../button/storyButton"
 
 const Error: VFC = () => {
   const dispatch = useDispatch()

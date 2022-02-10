@@ -2,7 +2,7 @@ import React from 'react';
 import Stack from "./Stack"
 
 export default {
-  title: "components/Stack",
+  title: "components/StoryStack",
   component: Stack,
   // controlsに追加して、storybook側で値を自由に変更したい。
   argTypes: {

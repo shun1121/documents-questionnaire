@@ -9,8 +9,8 @@ import {
   selectCheckboxItems,
   selectVal,
   storedText,
-} from "../features/questionnaire/questionnaireSlice"
-import { StoryButton } from "./storyButton"
+} from "../../features/questionnaire/questionnaireSlice"
+import { StoryButton } from "../button/storyButton"
 import './confirm.css'
 
 type PropType = {

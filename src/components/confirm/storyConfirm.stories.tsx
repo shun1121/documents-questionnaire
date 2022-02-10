@@ -1,9 +1,8 @@
 import React from 'react';
 import Confirm from "./confirm"
-// import "../App.scss"
 
 export default {
-  title: "components/Confirm",
+  title: "components/StoryConfirm",
   component: Confirm,
   argTypes: { 
     handleClick: { action: "handleClick"},
