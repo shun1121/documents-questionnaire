@@ -22,7 +22,12 @@ export const StoryTable = ({
         </thead>
         <tbody>
           <tr className="1">
-            <td className="questionTtl td1"><span>1. </span>英語の授業中、教師は英語のみで教えるべきだ。</td>
+            <td className="questionTtl td1">
+              <div className="Question">
+                <p className="QuestionNum">1. </p>
+                <p>英語の授業中、教師は英語のみで教えるべきだ。</p>
+              </div>
+            </td>
             <td className="td2">
               <input
                 type="radio"
@@ -65,7 +70,12 @@ export const StoryTable = ({
             </td>
           </tr>
           <tr className="2">
-            <td className="questionTtl td1"><span>2. </span>英語の例文や文章の音読をもっと取り入れるべきだ。</td>
+            <td className="questionTtl td1">
+              <div className="Question">
+                <p className="QuestionNum">2. </p>
+                <p>英語の例文や文章の音読をもっと取り入れるべきだ</p>
+              </div>
+            </td>
             <td className="td2">
               <input
                 type="radio"
@@ -108,7 +118,12 @@ export const StoryTable = ({
             </td>
           </tr>
           <tr className="3">
-            <td className="questionTtl td1"><span>3. </span>中学英語段階で基本の発音記号は教えておくべきだ。</td>
+            <td className="questionTtl td1">
+              <div className="Question">
+                <p className="QuestionNum">3. </p>
+                <p>中学英語段階で基本の発音記号は教えておくべきだ。</p>
+              </div>
+            </td>
             <td className="td2">
               <input
                 type="radio"
@@ -151,7 +166,12 @@ export const StoryTable = ({
             </td>
           </tr>
           <tr className="4">
-            <td className="questionTtl td1"><span>4. </span>英語の授業では、英語らしく発音しなければならない環境を作るべきだ。</td>
+            <td className="questionTtl td1">
+              <div className="Question">
+                <p className="QuestionNum">4. </p>
+                <p>英語の授業では、英語らしく発音しなければならない環境を作るべきだ。</p>
+              </div>
+            </td>
             <td className="td2">
               <input
                 type="radio"

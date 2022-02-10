@@ -1,7 +1,7 @@
 // import '../src/index.css';
 
-// import { Provider } from 'react-redux';
-// import { store } from '../src/app/store'
+import { Provider } from 'react-redux';
+import { store } from '../src/app/store'
 // import { addDecorator } from '@storybook/react'
 
 export const parameters = {
@@ -14,16 +14,15 @@ export const parameters = {
   },
 }
 
+export const decorators = [
+  (Story) => (
+    <Provider store={store}>
+      <Story />
+    </Provider>
+  ),
+]
 // addDecorator((Story) => (
 //   <Provider store={store}>
 //     <Story />
 //   </Provider>
 // ))
-
-// export const decorators = [
-//   (Story) => (
-//     <Provider store={store}>
-//       <Story />
-//     </Provider>
-//   ),
-// ]

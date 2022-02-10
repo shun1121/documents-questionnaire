@@ -10,6 +10,8 @@ import {
   selectVal,
   storedText,
 } from "../features/questionnaire/questionnaireSlice"
+import { StoryButton } from "./storyButton"
+import './confirm.css'
 
 type PropType = {
   excess?: boolean;
@@ -33,9 +35,15 @@ const Confirm: VFC<PropType> = ({ excess }) => {
     <>
       {excess ? (
         <div className="content">
-          <div>400字以内で記述してください。</div>
+          <div className="caution">400字以内で記述してください。</div>
           <div className="close">
-            <button onClick={confirmClose}>閉じる</button>
+            <StoryButton
+              color="white"
+              handleClick={confirmClose}
+              label="閉じる"
+              primary
+              size='medium'
+            />
           </div>
         </div>
       ) : (
@@ -69,7 +77,13 @@ const Confirm: VFC<PropType> = ({ excess }) => {
             <div className="answer">{text}</div>
           </div>
           <div className="close">
-            <button onClick={confirmClose}>閉じる</button>
+            <StoryButton
+              color="white"
+              handleClick={confirmClose}
+              label="閉じる"
+              primary
+              size='medium'
+            />
           </div>
         </div>
       )}

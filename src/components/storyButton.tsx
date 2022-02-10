@@ -2,6 +2,7 @@ import React from 'react';
 import './storyButton.css'
 
 interface ButtonProps {
+  id?: string;
   primary?: boolean;
   backgroundColor?: string;
   color?: string;
@@ -11,6 +12,7 @@ interface ButtonProps {
 }
 
 export const StoryButton = ({
+  id,
   primary = false,
   backgroundColor,
   color,
@@ -35,6 +37,7 @@ export const StoryButton = ({
   }
   return (
     <button
+      id={id}
       onClick={handleClick}
       className={['storybook-button', mode].join(' ')}
       style={style}

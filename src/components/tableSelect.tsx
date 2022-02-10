@@ -12,7 +12,7 @@ type RadioBtnVal = {
 const TableSelect: VFC = () => {
   const dispatch = useDispatch()
 
-  const handleInputChange = (event: any) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name[1]
     const value = event.target.value
     const latest: RadioBtnVal = {
