@@ -5,7 +5,12 @@ table {
 }
 .questionTtl {
   text-align: left;
+}
+.Question {
   display: flex;
+}
+.QuestionNum {
+  margin-right: 8px;
 }
 .th1, .th2, .th3, .th4, .th5, 
 .td1, .td2, .td3, .td4, .td5 {
@@ -13,11 +18,8 @@ table {
   padding: 10px;
   box-sizing: border-box;
 }
-.td1 {
-  border-top: none;
-  border-right: none;
-  margin: -0.5px;
-  box-sizing: border-box;
+.th2, .th3, .th4, .th5 {
+  width: 15%;
 }
 span {
   margin-right: 5px;

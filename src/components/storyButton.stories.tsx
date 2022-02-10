@@ -29,7 +29,8 @@ Close.args = {
   primary: true,
   label: '閉じる',
   size: 'medium',
-  color: 'white'
+  color: 'white',
+  id: 'button'
 }
 export const Green= Template.bind({})
 Green.args = {

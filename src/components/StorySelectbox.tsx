@@ -10,12 +10,10 @@ interface SelectboxProps {
 }
 
 export const StorySelectbox = ({
-  value='default',
   time,
   options=timeOptions,
   handleChange
 }: SelectboxProps) => {
-  console.log(value)
 
   return (
     <div className="wrapper">

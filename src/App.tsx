@@ -41,7 +41,7 @@ const App: VFC = () => {
   const val3 = answer3.value
   const val4 = answer4.value
   
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     if (val1 === "" || val2 === "" || val3 === "" || val4 === "" 
     || checkbox.length === 0 || select === "" || text === "") {
       dispatch(flgOpen(!flg))
@@ -51,6 +51,38 @@ const App: VFC = () => {
     e.preventDefault()
   }
 
+  // setTimeout(() => {
+  //   const modal = document.getElementById('overlay')
+  //   modal.addEventListener('click', (e: any) => {
+  //     if (confirm && e.target === modal) {
+  //       dispatch(confirmOpen(!confirm))
+  //     } else if (flg && e.target === modal) {
+  //       dispatch(flgOpen(!flg))
+  //     }
+  //   })
+  // },0)
+  if (confirm) {
+    setTimeout(() => {
+      const modal = document.getElementById('overlay')
+      modal.addEventListener('click', (e: any) => {
+        console.log(e.target)
+        if (e.target === modal) {
+          dispatch(confirmOpen(!confirm))
+        }
+      })
+    },0)
+  }
+  if (flg) {
+    setTimeout(() => {
+      const modal2 = document.getElementById('overlay2')
+      modal2.addEventListener('click', (e: any) => {
+        if (e.target === modal2) {
+          dispatch(flgOpen(!flg))
+        }
+      })
+    },0)
+  }
+  
   return (
     <div className="App">
       <header className="header">
@@ -68,8 +100,9 @@ const App: VFC = () => {
           <SelectBox time="時間" />
           <Questions questionNum="4" />
           <InputText />
-          <div className="buttonWrapper">
+          <div className="buttonWrapper" id="buttonWrapper">
             <StoryButton
+              id="button"
               handleClick={() => {}}
               label="回答状況を確認"
               primary
@@ -89,7 +122,7 @@ const App: VFC = () => {
         <></>
       )}
       {flg ? (
-        <div id="overlay">
+        <div id="overlay2">
           <Error />
         </div>
       ) : (

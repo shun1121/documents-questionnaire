@@ -16,5 +16,9 @@ const Template = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  variant: 'primary'
+  excess: false
+}
+export const Excess = Template.bind({})
+Excess.args = {
+  excess: true
 }
