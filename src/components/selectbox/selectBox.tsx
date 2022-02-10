@@ -1,7 +1,7 @@
 import React, { VFC } from "react"
 import { timeOptions } from "./selectBoxOptions"
 import { useDispatch, useSelector } from "react-redux"
-import { selectBox, selectVal } from "../features/questionnaire/questionnaireSlice"
+import { selectBox, selectVal } from "../../features/questionnaire/questionnaireSlice"
 import { StorySelectbox } from "./storySelectbox"
 
 interface Props {

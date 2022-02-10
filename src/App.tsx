@@ -1,11 +1,11 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import Checkbox from "./components/checkbox"
-import InputText from "./components/inputText"
-import QuestionnaireTitle from "./components/questionnaireTitle"
-import Questions from "./components/questions"
-import SelectBox from "./components/selectBox"
-import TableSelect from "./components/tableSelect"
+import Checkbox from "./components/checkbox/checkbox"
+import InputText from "./components/inputText/inputText"
+import QuestionnaireTitle from "./components/title/questionnaireTitle"
+import Questions from "./components/questions/questions"
+import SelectBox from "./components/selectbox/selectBox"
+import TableSelect from "./components/table/tableSelect"
 import "./App.scss"
 import {
   confirmOpen,
@@ -20,9 +20,9 @@ import {
   selectVal,
   storedText,
 } from "./features/questionnaire/questionnaireSlice"
-import Confirm from "./components/confirm"
-import Error from "./components/error"
-import { StoryButton } from "./components/storyButton"
+import Confirm from "./components/confirm/confirm"
+import Error from "./components/error/error"
+import { StoryButton } from "./components/button/storyButton"
 
 const App: VFC = () => {
   const dispatch = useDispatch()

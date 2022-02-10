@@ -1,7 +1,7 @@
 import React, { VFC } from "react"
 import { useDispatch } from "react-redux"
-import { checkRadio } from "../features/questionnaire/questionnaireSlice"
-import "../App.scss"
+import { checkRadio } from "../../features/questionnaire/questionnaireSlice"
+import "../../App.scss"
 import { StoryTable } from "./storyTable"
 
 type RadioBtnVal = {

@@ -2,7 +2,7 @@ import React from 'react';
 import Button1 from "./storyButton"
 
 export default {
-  title: "components/Button",
+  title: "components/StoryButton",
   component: Button1,
   argTypes: { 
     handleClick: { action: "handleClick"},
