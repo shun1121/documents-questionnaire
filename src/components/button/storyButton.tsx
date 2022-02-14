@@ -1,14 +1,14 @@
-import React from 'react';
-import './storyButton.css'
+import React from "react"
+import "./storyButton.css"
 
 interface ButtonProps {
-  id?: string;
-  primary?: boolean;
-  backgroundColor?: string;
-  color?: string;
-  size?: 'small' | 'medium' | 'large';
-  label?: string;
-  handleClick?: () => void;
+  id?: string
+  primary?: boolean
+  backgroundColor?: string
+  color?: string
+  size?: "small" | "medium" | "large"
+  label?: string
+  handleClick?: () => void
 }
 
 export const StoryButton = ({
@@ -16,11 +16,11 @@ export const StoryButton = ({
   primary = false,
   backgroundColor,
   color,
-  size = 'medium',
+  size = "medium",
   label,
   handleClick,
 }: ButtonProps) => {
-  const mode = primary? 'button-primary' : 'button-secondary'
+  const mode = primary ? "button-primary" : "button-secondary"
   let scale = 1
   if (size === "small") {
     scale = 0.5
@@ -31,21 +31,21 @@ export const StoryButton = ({
   const style = {
     backgroundColor,
     color,
-    padding: `${scale*0.5}rem ${scale*1}rem`,
-    border: 'none',
-    cursor: 'pointer',
+    padding: `${scale * 0.5}rem ${scale * 1}rem`,
+    border: "none",
+    cursor: "pointer",
   }
   return (
     <button
       id={id}
       onClick={handleClick}
-      className={['storybook-button', mode].join(' ')}
+      className={["storybook-button", mode].join(" ")}
       style={style}
     >
       {label}
     </button>
-  );
-};
+  )
+}
 
 export default StoryButton
 
@@ -97,4 +97,3 @@ export default StoryButton
 //     </button>
 //   );
 // };
-

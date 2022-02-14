@@ -1,7 +1,10 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { inputText, storedText } from "../../features/questionnaire/questionnaireSlice"
-import { StoryInput } from './storyInput'
+import {
+  inputText,
+  storedText,
+} from "../../features/questionnaire/questionnaireSlice"
+import { StoryInput } from "./storyInput"
 
 const InputText: VFC = () => {
   const dispatch = useDispatch()
@@ -12,9 +15,7 @@ const InputText: VFC = () => {
     dispatch(inputText(inputValue))
   }
 
-  return (
-    <StoryInput text={text} handleChange={handleChange} />
-  )
+  return <StoryInput text={text} handleChange={handleChange} />
 }
 
 export default InputText

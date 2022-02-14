@@ -1,21 +1,19 @@
-import React from 'react'
-import { StoryTable } from './storyTable'
+import React from "react"
+import { StoryTable } from "./storyTable"
 
 export default {
-  title: 'Components/StoryTable',
+  title: "Components/StoryTable",
   component: StoryTable,
   argTypes: {
-    handleInputChange: { 
-      action: "handleInputChange"
-    }
-  }
+    handleInputChange: {
+      action: "handleInputChange",
+    },
+  },
 }
 
-const Template = (args) => (
-  <StoryTable {...args} />
-)
+const Template = (args) => <StoryTable {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  variant: 'primary',
+  variant: "primary",
 }

@@ -5,8 +5,8 @@ import "../../App.scss"
 import { StoryTable } from "./storyTable"
 
 type RadioBtnVal = {
-  id: string;
-  value: string;
+  id: string
+  value: string
 }
 
 const TableSelect: VFC = () => {
@@ -17,15 +17,13 @@ const TableSelect: VFC = () => {
     const value = event.target.value
     const latest: RadioBtnVal = {
       id: name,
-      value: value
+      value: value,
     }
     console.log(latest)
     dispatch(checkRadio(latest))
   }
-  
-  return (
-    <StoryTable handleInputChange={handleInputChange} />
-  )
+
+  return <StoryTable handleInputChange={handleInputChange} />
 }
 
 export default TableSelect

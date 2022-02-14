@@ -1,14 +1,14 @@
-import React from 'react';
-import './storyCheckbox.css'
+import React from "react"
+import "./storyCheckbox.css"
 
 interface CheckboxProps {
-  color?: string;
-  type: string;
-  name: string;
-  value: string;
-  fontSize?: '10px' | '15px' | '20px';
+  color?: string
+  type: string
+  name: string
+  value: string
+  fontSize?: "10px" | "15px" | "20px"
   checked?: boolean
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export const StoryCheckbox = ({
@@ -20,14 +20,14 @@ export const StoryCheckbox = ({
   checked,
   handleChange,
 }: CheckboxProps) => {
-  const mode = fontSize === '15px' ? 'paddingT': ''
+  const mode = fontSize === "15px" ? "paddingT" : ""
   const labelStyle = {
-    fontSize: fontSize
+    fontSize: fontSize,
   }
   const style = {
     color,
-    cursor: 'pointer',
-    fontSize: fontSize
+    cursor: "pointer",
+    fontSize: fontSize,
   }
   return (
     <div className="checkbox-wrap" style={style}>
@@ -39,12 +39,9 @@ export const StoryCheckbox = ({
         checked={checked}
         onChange={handleChange}
       />
-      <label htmlFor={value}
-        className={mode}
-        style={labelStyle}
-      >
+      <label htmlFor={value} className={mode} style={labelStyle}>
         {value}
       </label>
     </div>
-  );
-};
+  )
+}
