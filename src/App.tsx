@@ -1,11 +1,14 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { StoryButton } from "./components/button/storyButton"
 import Checkbox from "./components/checkbox/checkbox"
+import Confirm from "./components/confirm/confirm"
+import Error from "./components/error/error"
 import InputText from "./components/inputText/inputText"
-import QuestionnaireTitle from "./components/title/questionnaireTitle"
 import Questions from "./components/questions/questions"
 import SelectBox from "./components/selectbox/selectBox"
 import TableSelect from "./components/table/tableSelect"
+import QuestionnaireTitle from "./components/title/questionnaireTitle"
 import "./App.scss"
 import {
   confirmOpen,
@@ -20,9 +23,6 @@ import {
   selectVal,
   storedText,
 } from "./features/questionnaire/questionnaireSlice"
-import Confirm from "./components/confirm/confirm"
-import Error from "./components/error/error"
-import { StoryButton } from "./components/button/storyButton"
 
 const App: VFC = () => {
   const dispatch = useDispatch()
@@ -40,10 +40,17 @@ const App: VFC = () => {
   const val2 = answer2.value
   const val3 = answer3.value
   const val4 = answer4.value
-  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    if (val1 === "" || val2 === "" || val3 === "" || val4 === "" 
-    || checkbox.length === 0 || select === "" || text === "") {
+    if (
+      val1 === "" ||
+      val2 === "" ||
+      val3 === "" ||
+      val4 === "" ||
+      checkbox.length === 0 ||
+      select === "" ||
+      text === ""
+    ) {
       dispatch(flgOpen(!flg))
     } else {
       dispatch(confirmOpen(!confirm))
@@ -63,26 +70,26 @@ const App: VFC = () => {
   // },0)
   if (confirm) {
     setTimeout(() => {
-      const modal = document.getElementById('overlay')
-      modal.addEventListener('click', (e: any) => {
+      const modal = document.getElementById("overlay")
+      modal.addEventListener("click", (e: any) => {
         console.log(e.target)
         if (e.target === modal) {
           dispatch(confirmOpen(!confirm))
         }
       })
-    },0)
+    }, 0)
   }
   if (flg) {
     setTimeout(() => {
-      const modal2 = document.getElementById('overlay2')
-      modal2.addEventListener('click', (e: any) => {
+      const modal2 = document.getElementById("overlay2")
+      modal2.addEventListener("click", (e: any) => {
         if (e.target === modal2) {
           dispatch(flgOpen(!flg))
         }
       })
-    },0)
+    }, 0)
   }
-  
+
   return (
     <div className="App">
       <header className="header">
@@ -112,11 +119,7 @@ const App: VFC = () => {
       </div>
       {confirm ? (
         <div id="overlay">
-          {text.length <= 400 ? (
-            <Confirm />
-          ) : (
-            <Confirm excess />
-          )}
+          {text.length <= 400 ? <Confirm /> : <Confirm excess />}
         </div>
       ) : (
         <></>

@@ -1,23 +1,37 @@
-import React from 'react'
+import React from "react"
 import "./storyTable.css"
 
 interface TableProps {
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export const StoryTable = ({
-  handleInputChange
-}: TableProps) => {
+export const StoryTable = ({ handleInputChange }: TableProps) => {
   return (
     <div>
       <table>
         <thead>
           <tr>
             <th className="th1">質問</th>
-            <th className="th2">とても<br/>同意</th>
-            <th className="th3">少し<br/>同意</th>
-            <th className="th4">あまり<br/>同意しない</th>
-            <th className="th5">全く<br/>同意しない</th>
+            <th className="th2">
+              とても
+              <br />
+              同意
+            </th>
+            <th className="th3">
+              少し
+              <br />
+              同意
+            </th>
+            <th className="th4">
+              あまり
+              <br />
+              同意しない
+            </th>
+            <th className="th5">
+              全く
+              <br />
+              同意しない
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -169,7 +183,9 @@ export const StoryTable = ({
             <td className="questionTtl td1">
               <div className="Question">
                 <p className="QuestionNum">4. </p>
-                <p>英語の授業では、英語らしく発音しなければならない環境を作るべきだ。</p>
+                <p>
+                  英語の授業では、英語らしく発音しなければならない環境を作るべきだ。
+                </p>
               </div>
             </td>
             <td className="td2">

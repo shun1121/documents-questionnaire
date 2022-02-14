@@ -7,37 +7,106 @@ body {
 .App {
   text-align: center;
 }
-h1 > span {
-  background-color: white;
-  padding: 20px;
-}
 h1 {
   padding-top: 50px;
   height: 200px;
   color: black;
   margin-top: 0px;
 }
-.header {
-  width: 100%;
-  background-color: #1ea8fd;
-}
 p {
   text-align: left;
   font-size: 17px;
 }
-.form {
-  background-color: white;
-  margin: -120px auto 0;
-  width: 70%;
-  padding: 20px;
-  margin-bottom: 80px;
+@media only screen and (max-width: 1440px) {
+  .header {
+    width: 100%;
+    background-color: #1ea8fd;
+  }
+  h1 > span {
+    background-color: white;
+    padding: 20px;
+  }
+  .form {
+    background-color: white;
+    margin: -120px auto 0;
+    width: 70%;
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
-form {
-  width: 80%;
-  margin: 0 auto;
+@media only screen and (max-width: 767px) {
+  .header {
+    width: 100%;
+    background-color: #1ea8fd;
+    height: 300px;
+  }
+  h1 > span {
+    background-color: white;
+    padding: 8px 0px;
+  }
+  .form {
+    background-color: white;
+    margin: -120px auto 0;
+    width: 85%;
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .header {
+    width: 100%;
+    background-color: #1ea8fd;
+    height: 300px;
+  }
+  h1 > span {
+    background-color: white;
+    padding: 8px 0px;
+    font-size: 23px;
+  }
+  .form {
+    background-color: white;
+    margin: -120px auto 0;
+    width: 88%;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .header {
+    width: 100%;
+    background-color: #1ea8fd;
+    height: 300px;
+  }
+  h1 > span {
+    background-color: white;
+    padding: 8px 0px;
+    font-size: 20px;
+  }
+  .form {
+    background-color: white;
+    margin: -120px auto 0;
+    width: 89%;
+    padding: 20px;
+  }
+  form {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .buttonWrapper {
-  margin: 30px 0px
+  margin: 30px 0px;
 }
 .questions {
   padding-top: 15px;
@@ -46,66 +115,29 @@ form {
 }
 // overlayで囲んだ内容の表示位置などを決める
 #overlay {
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 
   display: flex;
   overflow-y: scroll;
   overflow: auto;
 }
 #overlay2 {
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 
   display: flex;
   overflow-y: scroll;
   overflow: auto;
 }
-// .questionTtl {
-//   padding-left: 10px;
-//   text-align: left;
-// }
-// .content {
-//   justify-content: center;
-//   width: 80%;
-//   background-color: white;
-//   margin: auto;
-//   padding: 20px 10px;
-// }
-// .resultWrapper {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-// .question {
-//   width: 51%;
-//   padding-right: 3px;
-//   text-align: right;
-//   border-right: 1px solid black;
-// }
-// .answer {
-//   width: 48%;
-//   word-wrap: break-word;
-//   min-width: 48%;
-//   text-align: center;
-// }
-// .close {
-//   margin: 30px 0px;
-// }
-// .firstColumn {
-//   margin-top: 30px;
-// }
-// .lastColumn {
-//   margin-top: 15px;
-//   margin-bottom: 40px;
-// }
 .caution {
   margin-top: 30px;
 }

@@ -19,7 +19,7 @@ const Error: VFC = () => {
           handleClick={flgClose}
           label="閉じる"
           primary
-          size='medium'
+          size="medium"
         />
       </div>
     </div>

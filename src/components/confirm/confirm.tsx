@@ -11,10 +11,10 @@ import {
   storedText,
 } from "../../features/questionnaire/questionnaireSlice"
 import { StoryButton } from "../button/storyButton"
-import './confirm.css'
+import "./confirm.css"
 
 type PropType = {
-  excess?: boolean;
+  excess?: boolean
 }
 
 const Confirm: VFC<PropType> = ({ excess }) => {
@@ -42,7 +42,7 @@ const Confirm: VFC<PropType> = ({ excess }) => {
               handleClick={confirmClose}
               label="閉じる"
               primary
-              size='medium'
+              size="medium"
             />
           </div>
         </div>
@@ -66,7 +66,7 @@ const Confirm: VFC<PropType> = ({ excess }) => {
           </div>
           <div className="resultWrapper">
             <p className="question">深く学びたかった分野。</p>
-            <p className="answer">{checkbox.join(', ')}</p>
+            <p className="answer">{checkbox.join(", ")}</p>
           </div>
           <div className="resultWrapper">
             <p className="question">一週間の英語の学習時間。</p>
@@ -82,7 +82,7 @@ const Confirm: VFC<PropType> = ({ excess }) => {
               handleClick={confirmClose}
               label="閉じる"
               primary
-              size='medium'
+              size="medium"
             />
           </div>
         </div>

@@ -1,20 +1,19 @@
-import React from 'react'
+import React from "react"
 import { timeOptions } from "./selectBoxOptions"
-import './storySelectbox.css'
+import "./storySelectbox.css"
 
 interface SelectboxProps {
-  value?: string;
-  time?: string;
-  options: (string | number)[][];
-  handleChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  value?: string
+  time?: string
+  options: (string | number)[][]
+  handleChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
 export const StorySelectbox = ({
   time,
-  options=timeOptions,
-  handleChange
+  options = timeOptions,
+  handleChange,
 }: SelectboxProps) => {
-
   return (
     <div className="wrapper">
       <div className="selectbox select">

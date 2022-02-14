@@ -1,6 +1,9 @@
 import React, { VFC } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { checkbox, selectCheckboxItems } from "../../features/questionnaire/questionnaireSlice"
+import {
+  checkbox,
+  selectCheckboxItems,
+} from "../../features/questionnaire/questionnaireSlice"
 import { StoryCheckbox } from "./storyCheckbox"
 
 const Checkbox: VFC = () => {
@@ -15,7 +18,7 @@ const Checkbox: VFC = () => {
   }
   return (
     <div>
-      <div style={{display: 'flex', justifyContent: 'center'}}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <StoryCheckbox
           color="black"
           fontSize="15px"
@@ -59,16 +62,6 @@ const Checkbox: VFC = () => {
 
 export default Checkbox
 
-
-
-
-
-
-
-
-
-
-
 // import React, {useState} from "react"
 
 // type checkboxType = {
@@ -87,44 +80,44 @@ export default Checkbox
 //   }
 //   console.log(checkedItem)
 
-  // useEffect(() => {
-  //   const checkedBoxes= document.querySelectorAll('input[type=checkbox]:checked');
-  //   console.log(checkedBoxes)
-  // },[])
+// useEffect(() => {
+//   const checkedBoxes= document.querySelectorAll('input[type=checkbox]:checked');
+//   console.log(checkedBoxes)
+// },[])
 
-  // let targets: any = document.querySelectorAll(`input[type='checkbox'][name='checkbox']`);
-  // console.log(targets)
-  // let cnt = 0
-  // for (const i of targets) {
-  //     // i.checked = true;
-  //     if (!i.checked) {
-  //       cnt++
-  //     }
-  //     console.log(i.checked)
-  // }
-  // console.log(cnt)
-  // const handleChange = (e: any) => {
-  //   let targets: any = document.querySelectorAll(`input[type='checkbox'][name='checkbox']`);
-  //   let cnt = 0
-  //   for (const i of targets) {
-  //       // i.checked = true;
-  //       if (i.checked) {
-  //         cnt++
-  //       }
-  //   }
-  //   console.log(cnt)
+// let targets: any = document.querySelectorAll(`input[type='checkbox'][name='checkbox']`);
+// console.log(targets)
+// let cnt = 0
+// for (const i of targets) {
+//     // i.checked = true;
+//     if (!i.checked) {
+//       cnt++
+//     }
+//     console.log(i.checked)
+// }
+// console.log(cnt)
+// const handleChange = (e: any) => {
+//   let targets: any = document.querySelectorAll(`input[type='checkbox'][name='checkbox']`);
+//   let cnt = 0
+//   for (const i of targets) {
+//       // i.checked = true;
+//       if (i.checked) {
+//         cnt++
+//       }
+//   }
+//   console.log(cnt)
 
-  //   let flg
-  //   if (e.target.checked) {
-  //     flg = 1
-  //     setCheckedItem(checkedItem.concat(e.target.value))
-  //   } else {
-  //     flg = 0
-  //     const checked = checkedItem.filter((item) => item.checked)
-  //   }
-  // }
-  // console.log(checkedItem)
-  
+//   let flg
+//   if (e.target.checked) {
+//     flg = 1
+//     setCheckedItem(checkedItem.concat(e.target.value))
+//   } else {
+//     flg = 0
+//     const checked = checkedItem.filter((item) => item.checked)
+//   }
+// }
+// console.log(checkedItem)
+
 //   return (
 //     <>
 //       <input type="checkbox" className="checkbox" value= onChange={handleChange} />

@@ -12,11 +12,20 @@ table {
 .QuestionNum {
   margin-right: 8px;
 }
-.th1, .th2, .th3, .th4, .th5, 
-.td1, .td2, .td3, .td4, .td5 {
-  border: 1px solid black;
-  padding: 10px;
-  box-sizing: border-box;
+@media screen and (min-width: 551px) {
+  .th1, .th2, .th3, .th4, .th5, 
+  .td1, .td2, .td3, .td4, .td5 {
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 550px) {
+  .th1, .th2, .th3, .th4, .th5, 
+  .td1, .td2, .td3, .td4, .td5 {
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
 }
 .th2, .th3, .th4, .th5 {
   width: 15%;
