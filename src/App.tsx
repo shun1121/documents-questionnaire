@@ -57,17 +57,7 @@ const App: VFC = () => {
     }
     e.preventDefault()
   }
-
-  // setTimeout(() => {
-  //   const modal = document.getElementById('overlay')
-  //   modal.addEventListener('click', (e: any) => {
-  //     if (confirm && e.target === modal) {
-  //       dispatch(confirmOpen(!confirm))
-  //     } else if (flg && e.target === modal) {
-  //       dispatch(flgOpen(!flg))
-  //     }
-  //   })
-  // },0)
+  
   if (confirm) {
     setTimeout(() => {
       const modal = document.getElementById("overlay")

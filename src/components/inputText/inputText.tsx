@@ -6,7 +6,7 @@ import {
 } from "../../features/questionnaire/questionnaireSlice"
 import { StoryInput } from "./storyInput"
 
-const InputText: VFC = () => {
+export const InputText: VFC = () => {
   const dispatch = useDispatch()
   const text = useSelector(storedText)
 
