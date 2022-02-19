@@ -6,7 +6,7 @@ import {
 } from "../../features/questionnaire/questionnaireSlice"
 import { StoryCheckbox } from "./storyCheckbox"
 
-const Checkbox: VFC = () => {
+export const Checkbox: VFC = () => {
   const dispatch = useDispatch()
   const checkedItems = useSelector(selectCheckboxItems)
 
@@ -55,6 +55,7 @@ const Checkbox: VFC = () => {
           value="聞く"
           checked={checkedItems.includes("聞く")}
         />
+        おおお
       </div>
     </div>
   )
