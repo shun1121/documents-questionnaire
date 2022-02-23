@@ -55,7 +55,6 @@ export const Checkbox: VFC = () => {
           value="聞く"
           checked={checkedItems.includes("聞く")}
         />
-        おおお
       </div>
     </div>
   )

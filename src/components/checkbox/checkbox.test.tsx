@@ -6,16 +6,14 @@ import { Checkbox } from './checkbox';
 import { Provider } from 'react-redux';
 import { store } from '../../app/store';
 
-describe('InputText', () => {
-  test('renders Checkbox component', () => {
-    const { getByText } = render(
-      <Provider store={store}>
-        <Checkbox />
-      </Provider>
-    );
-    expect(getByText(/おおお/)).toBeInTheDocument();
-    // screen.debug();
-
-    // screen.getByText('Search:');
-  });
+test('renders Checkbox component', () => {
+  const { getByText } = render(
+    <Provider store={store}>
+      <Checkbox />
+    </Provider>
+  );
+  expect(getByText(/読む/)).toBeInTheDocument();
+  expect(getByText(/聞く/)).toBeInTheDocument();
+  expect(getByText(/話す/)).toBeInTheDocument();
+  expect(getByText(/聞く/)).toBeInTheDocument();
 });

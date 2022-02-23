@@ -11,7 +11,7 @@ interface Props {
   time: string
 }
 
-const SelectBox: VFC<Props> = (props) => {
+export const SelectBox: VFC<Props> = (props) => {
   const dispatch = useDispatch()
   const selectedValue = useSelector(selectVal)
   const options = timeOptions

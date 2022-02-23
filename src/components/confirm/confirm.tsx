@@ -17,7 +17,7 @@ type PropType = {
   excess?: boolean
 }
 
-const Confirm: VFC<PropType> = ({ excess }) => {
+export const Confirm: VFC<PropType> = ({ excess }) => {
   const dispatch = useDispatch()
   const answer1 = useSelector(result1)
   const answer2 = useSelector(result2)

@@ -9,7 +9,7 @@ type RadioBtnVal = {
   value: string
 }
 
-const TableSelect: VFC = () => {
+export const TableSelect: VFC = () => {
   const dispatch = useDispatch()
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
