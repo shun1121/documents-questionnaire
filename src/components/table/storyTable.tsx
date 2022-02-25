@@ -46,6 +46,7 @@ export const StoryTable = ({ handleInputChange }: TableProps) => {
               <input
                 type="radio"
                 id="button1-1"
+                data-testid='button1-1'
                 name="q1"
                 value="とても同意"
                 onChange={handleInputChange}
@@ -56,6 +57,7 @@ export const StoryTable = ({ handleInputChange }: TableProps) => {
               <input
                 type="radio"
                 id="button1-2"
+                data-testid='button1-2'
                 name="q1"
                 value="少し同意"
                 onChange={handleInputChange}
@@ -66,6 +68,7 @@ export const StoryTable = ({ handleInputChange }: TableProps) => {
               <input
                 type="radio"
                 id="button1-3"
+                data-testid='button1-3'
                 name="q1"
                 value="あまり同意しない"
                 onChange={handleInputChange}
@@ -76,6 +79,7 @@ export const StoryTable = ({ handleInputChange }: TableProps) => {
               <input
                 type="radio"
                 id="button1-4"
+                data-testid='button1-4'
                 name="q1"
                 value="全く同意しない"
                 onChange={handleInputChange}

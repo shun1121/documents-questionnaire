@@ -19,7 +19,7 @@ export const TableSelect: VFC = () => {
       id: name,
       value: value,
     }
-    console.log(latest)
+    // console.log(latest)
     dispatch(checkRadio(latest))
   }
 
