@@ -70,7 +70,7 @@ export const Confirm: VFC<PropType> = ({ excess }) => {
           </div>
           <div className="resultWrapper">
             <p className="question">一週間の英語の学習時間。</p>
-            <p className="answer">{select}時間</p>
+            <p className="answer" data-testid="selectHour">{select}時間</p>
           </div>
           <div className="resultWrapper lastColumn">
             <div className="question">日本の英語教育に取り入れるべきもの。</div>

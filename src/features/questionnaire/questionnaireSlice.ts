@@ -13,7 +13,7 @@ export interface QuestionnaireState {
   flg: boolean
 }
 
-const initialState: QuestionnaireState = {
+const questionnaireList: QuestionnaireState = {
   result1: { id: "", value: "" },
   result2: { id: "", value: "" },
   result3: { id: "", value: "" },
@@ -24,6 +24,8 @@ const initialState: QuestionnaireState = {
   confirm: false,
   flg: false,
 }
+
+const initialState: QuestionnaireState = questionnaireList
 
 export const QuestionnaireSlice = createSlice({
   name: "questionnaire",

@@ -1,16 +1,14 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import { StoryTable } from './storyTable'
 import { Provider } from 'react-redux'
 import { store } from '../../app/store';
-import { TableSelect } from './tableSelect'
 
 test('renders table component', () => {
   const handleInputChange = jest.fn();
-  const { getByText, container, getByRole, getByTestId } = render(
+  const { getByText, container, getByTestId } = render(
     <Provider store={store}>
-      {/* <TableSelect /> */}
       <StoryTable handleInputChange={handleInputChange} />
     </Provider>
   )

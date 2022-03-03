@@ -12,14 +12,15 @@ export const Checkbox: VFC = () => {
 
   const handleChange = (e: any) => {
     const checkedVal = e.target.value
-    console.log(e.target)
     console.log(checkedVal)
     dispatch(checkbox(checkedVal))
   }
+  console.log(checkedItems)
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <StoryCheckbox
+          data-testid="checkbox1"
           color="black"
           fontSize="15px"
           handleChange={handleChange}
@@ -29,6 +30,7 @@ export const Checkbox: VFC = () => {
           checked={checkedItems.includes("読む")}
         />
         <StoryCheckbox
+          data-testid="checkbox2"
           color="black"
           fontSize="15px"
           type="checkbox"
@@ -38,6 +40,7 @@ export const Checkbox: VFC = () => {
           checked={checkedItems.includes("書く")}
         />
         <StoryCheckbox
+          data-testid="checkbox3"
           color="black"
           fontSize="15px"
           type="checkbox"
@@ -47,6 +50,7 @@ export const Checkbox: VFC = () => {
           checked={checkedItems.includes("話す")}
         />
         <StoryCheckbox
+          data-testid="checkbox4"
           color="black"
           fontSize="15px"
           type="checkbox"
@@ -61,69 +65,3 @@ export const Checkbox: VFC = () => {
 }
 
 export default Checkbox
-
-// import React, {useState} from "react"
-
-// type checkboxType = {
-//   checked?: boolean
-// }
-
-// const Checkbox = (props) => {
-//   const [checkedItem, setCheckedItem] = useState([])
-
-//   const  = props
-//   const handleChange = (e: any) => {
-//     if (e.target.checked) {
-//       console.log(e.target.value)
-//       setCheckedItem(checkedItem.concat(e.target.value))
-//     }
-//   }
-//   console.log(checkedItem)
-
-// useEffect(() => {
-//   const checkedBoxes= document.querySelectorAll('input[type=checkbox]:checked');
-//   console.log(checkedBoxes)
-// },[])
-
-// let targets: any = document.querySelectorAll(`input[type='checkbox'][name='checkbox']`);
-// console.log(targets)
-// let cnt = 0
-// for (const i of targets) {
-//     // i.checked = true;
-//     if (!i.checked) {
-//       cnt++
-//     }
-//     console.log(i.checked)
-// }
-// console.log(cnt)
-// const handleChange = (e: any) => {
-//   let targets: any = document.querySelectorAll(`input[type='checkbox'][name='checkbox']`);
-//   let cnt = 0
-//   for (const i of targets) {
-//       // i.checked = true;
-//       if (i.checked) {
-//         cnt++
-//       }
-//   }
-//   console.log(cnt)
-
-//   let flg
-//   if (e.target.checked) {
-//     flg = 1
-//     setCheckedItem(checkedItem.concat(e.target.value))
-//   } else {
-//     flg = 0
-//     const checked = checkedItem.filter((item) => item.checked)
-//   }
-// }
-// console.log(checkedItem)
-
-//   return (
-//     <>
-//       <input type="checkbox" className="checkbox" value= onChange={handleChange} />
-//       <span></span>
-//     </>
-//   )
-// }
-
-// export default Checkbox

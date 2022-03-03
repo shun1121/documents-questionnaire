@@ -12,4 +12,5 @@ test('render inputText component', () => {
     </Provider>
   )
   expect(screen.getByText(/全ての項目を記入してください。/)).toBeInTheDocument();
+  expect(screen.getByText(/閉じる/)).toBeInTheDocument();
 })

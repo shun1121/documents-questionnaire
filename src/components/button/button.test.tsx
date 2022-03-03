@@ -6,17 +6,20 @@ import { Provider } from 'react-redux'
 import { store } from '../../app/store'
 
 test('render button component', () => {
+  const handleClick = jest.fn();
   render(
     <Provider store={store}>
       <StoryButton
         id="button"
-        handleClick={() => {}}
+        handleClick={handleClick}
         label="回答状況を確認"
         primary
       />
     </Provider>
   )
-  // screen.debug()
+
   const button = screen.getByText(/回答状況を確認/)
+  // expect(button).toHaveStyle('background-color: ButtonFace')
   fireEvent.click(button)
+  expect(handleClick).toHaveBeenCalledTimes(1);
 })
