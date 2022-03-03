@@ -105,7 +105,8 @@
     "jsx": "react",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "lib": ["es2019", "dom"]
+    "lib": ["es2019", "dom"],
+    "esModuleInterop": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
 }

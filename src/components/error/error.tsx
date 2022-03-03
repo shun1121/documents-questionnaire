@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux"
 import { flgOpen } from "../../features/questionnaire/questionnaireSlice"
 import { StoryButton } from "../button/storyButton"
 
-const Error: VFC = () => {
+export const Error: VFC = () => {
   const dispatch = useDispatch()
 
   const flgClose = () => {

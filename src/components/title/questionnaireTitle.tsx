@@ -1,6 +1,6 @@
 import React from "react"
 
-const QuestionnaireTitle = () => {
+export const QuestionnaireTitle = () => {
   return (
     <h1>
       <span>日本の英語教育に関するアンケート</span>
