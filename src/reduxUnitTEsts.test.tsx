@@ -49,21 +49,21 @@ describe('RTK tests', () => {
     expect(selectedItem).toBe(firstOption)
   })
 
-  test('check inputText', () => {
+  test('check inputText dispatched finely', () => {
     store.dispatch(inputText("you're goddamn right!"))
     const state = store.getState().questionnaire
     const inputVal = state.inputValue
     expect(inputVal).toBe("you're goddamn right!")
   })
 
-  test('check confirmOpen', () => {
+  test('check confirmOpen dispatched finely', () => {
     store.dispatch(confirmOpen(true))
     const state = store.getState().questionnaire
     const confirmVal = state.confirm
     expect(confirmVal).toBe(true)
   })
 
-  test('check flgOpen', () => {
+  test('check flgOpen dispatched finely', () => {
     store.dispatch(flgOpen(true))
     const state = store.getState().questionnaire
     const flgVal = state.flg

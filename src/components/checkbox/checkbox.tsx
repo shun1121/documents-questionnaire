@@ -20,7 +20,7 @@ export const Checkbox: VFC = () => {
     <div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <StoryCheckbox
-          data-testid='checkbox1'
+          data-testid="checkbox1"
           color="black"
           fontSize="15px"
           handleChange={handleChange}
@@ -30,7 +30,7 @@ export const Checkbox: VFC = () => {
           checked={checkedItems.includes("読む")}
         />
         <StoryCheckbox
-          data-testid='checkbox2'
+          data-testid="checkbox2"
           color="black"
           fontSize="15px"
           type="checkbox"
@@ -40,7 +40,7 @@ export const Checkbox: VFC = () => {
           checked={checkedItems.includes("書く")}
         />
         <StoryCheckbox
-          data-testid='checkbox3'
+          data-testid="checkbox3"
           color="black"
           fontSize="15px"
           type="checkbox"
@@ -50,7 +50,7 @@ export const Checkbox: VFC = () => {
           checked={checkedItems.includes("話す")}
         />
         <StoryCheckbox
-          data-testid='checkbox4'
+          data-testid="checkbox4"
           color="black"
           fontSize="15px"
           type="checkbox"

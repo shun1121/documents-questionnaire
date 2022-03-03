@@ -18,6 +18,7 @@ test('render Confirm component', () => {
       <Confirm />
     </Provider>
   )
+  
   const twoToFour = timeOptions[1][1]
   store.dispatch(checkRadio({ id: '1', value: '全く同意しない'}))
   store.dispatch(checkRadio({ id: '2', value: 'あまり同意しない'}))

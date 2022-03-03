@@ -29,6 +29,7 @@ export const StoryCheckbox = ({
     cursor: "pointer",
     fontSize: fontSize,
   }
+  
   return (
     <div className="checkbox-wrap" style={style}>
       <input

@@ -6,7 +6,6 @@ import { Provider } from 'react-redux'
 import { store } from './app/store'
 import Confirm from './components/confirm/confirm'
 import App from './App'
-// import App from './App'
 
 // const renderBook = (book: BookState): RenderResult =>
 //   render(

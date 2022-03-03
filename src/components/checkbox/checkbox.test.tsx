@@ -12,6 +12,7 @@ test('renders Checkbox component', () => {
       <Checkbox />
     </Provider>
   );
+  
   expect(getByText(/読む/)).toBeInTheDocument();
   expect(getByText(/聞く/)).toBeInTheDocument();
   expect(getByText(/話す/)).toBeInTheDocument();
