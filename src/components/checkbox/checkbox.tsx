@@ -10,12 +10,10 @@ export const Checkbox: VFC = () => {
   const dispatch = useDispatch()
   const checkedItems = useSelector(selectCheckboxItems)
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const checkedVal = e.target.value
-    console.log(checkedVal)
     dispatch(checkbox(checkedVal))
   }
-  console.log(checkedItems)
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "center" }}>

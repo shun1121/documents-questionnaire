@@ -10,7 +10,7 @@ export const InputText: VFC = () => {
   const dispatch = useDispatch()
   const text = useSelector(storedText)
 
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     const inputValue = e.target.value
     dispatch(inputText(inputValue))
   }

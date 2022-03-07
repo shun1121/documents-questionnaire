@@ -1,5 +1,6 @@
 import React from "react"
 import { StoryTable } from "./storyTable"
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   title: "Components/StoryTable",
@@ -9,9 +10,9 @@ export default {
       action: "handleInputChange",
     },
   },
-}
+} as ComponentMeta<typeof StoryTable>;
 
-const Template = (args) => <StoryTable {...args} />
+const Template: ComponentStory<typeof StoryTable> = (args) => <StoryTable {...args} />
 
 export const Default = Template.bind({})
 Default.args = {

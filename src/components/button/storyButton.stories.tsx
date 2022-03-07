@@ -1,5 +1,6 @@
 import React from "react"
 import Button1 from "./storyButton"
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   title: "components/StoryButton",
@@ -12,10 +13,10 @@ export default {
         options: ["small", "medium", "large"],
       },
     },
-  },
-}
+  }
+} as ComponentMeta<typeof Button1>;
 
-const Template = (args) => <Button1 {...args} />
+const Template: ComponentStory<typeof Button1> = (args) => <Button1 {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
