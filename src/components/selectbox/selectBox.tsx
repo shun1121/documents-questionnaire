@@ -11,12 +11,12 @@ interface Props {
   time: string
 }
 
-export const SelectBox: VFC<Props> = (props) => {
+export const SelectBox: VFC<Props> = ({ time }) => {
   const dispatch = useDispatch()
   const selectedValue = useSelector(selectVal)
   const options = timeOptions
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     const selectVal = e.target.value
     dispatch(selectBox(selectVal))
   }
@@ -25,7 +25,7 @@ export const SelectBox: VFC<Props> = (props) => {
     <>
       <StorySelectbox
         options={options}
-        time={props.time}
+        time={time}
         value={selectedValue ? selectedValue : "時間を選択してください。"}
         handleChange={handleChange}
       />

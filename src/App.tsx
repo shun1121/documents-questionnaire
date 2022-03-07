@@ -24,6 +24,10 @@ import {
   storedText,
 } from "./features/questionnaire/questionnaireSlice"
 
+interface HTMLElementEvent<T extends HTMLElement> extends Event {
+  target: T;
+}
+
 const App: VFC = () => {
   const dispatch = useDispatch()
   const confirm = useSelector(confirmFlg)
@@ -61,7 +65,7 @@ const App: VFC = () => {
   if (confirm) {
     setTimeout(() => {
       const modal = document.getElementById("overlay")
-      modal.addEventListener("click", (e: any) => {
+      modal.addEventListener("click", (e: HTMLElementEvent<HTMLInputElement>) => {
         console.log(e.target)
         if (e.target === modal) {
           dispatch(confirmOpen(!confirm))
@@ -72,7 +76,7 @@ const App: VFC = () => {
   if (flg) {
     setTimeout(() => {
       const modal2 = document.getElementById("overlay2")
-      modal2.addEventListener("click", (e: any) => {
+      modal2.addEventListener("click", (e: HTMLElementEvent<HTMLInputElement>) => {
         if (e.target === modal2) {
           dispatch(flgOpen(!flg))
         }

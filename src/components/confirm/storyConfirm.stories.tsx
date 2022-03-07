@@ -1,5 +1,6 @@
 import React from "react"
-import Confirm from "./confirm"
+import { Confirm } from "./confirm"
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   title: "components/StoryConfirm",
@@ -7,9 +8,9 @@ export default {
   argTypes: {
     handleClick: { action: "handleClick" },
   },
-}
+} as ComponentMeta<typeof Confirm>;
 
-const Template = (args) => <Confirm {...args} />
+const Template: ComponentStory<typeof Confirm> = (args) => <Confirm {...args} />
 
 export const Default = Template.bind({})
 Default.args = {

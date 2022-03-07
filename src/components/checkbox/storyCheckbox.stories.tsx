@@ -1,5 +1,6 @@
 import React from "react"
 import { StoryCheckbox } from "./storyCheckbox"
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 // import { Provider } from 'react-redux';
 // import { store } from '../app/store'
 
@@ -16,9 +17,9 @@ export default {
       },
     },
   },
-}
+} as ComponentMeta<typeof StoryCheckbox>;
 
-const Template = (args) => <StoryCheckbox {...args} />
+const Template: ComponentStory<typeof StoryCheckbox> = (args) => <StoryCheckbox {...args} />
 
 export const CheckboxM = Template.bind({})
 CheckboxM.args = {

@@ -1,5 +1,6 @@
 import React from "react"
 import { StorySelectbox } from "./storySelectbox"
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
   title: "components/StorySelectbox",
@@ -7,9 +8,9 @@ export default {
   argTypes: {
     handleChange: { action: "handleChange" },
   },
-}
+} as ComponentMeta<typeof StorySelectbox>;
 
-const Template = (args) => <StorySelectbox {...args} />
+const Template: ComponentStory<typeof StorySelectbox> = (args) => <StorySelectbox {...args} />
 
 export const Selectbox = Template.bind({})
 Selectbox.args = {

@@ -1,11 +1,11 @@
-import React from "react"
+import React, { VFC } from "react"
 import "./storyTable.css"
 
 interface TableProps {
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export const StoryTable = ({ handleInputChange }: TableProps) => {
+export const StoryTable: VFC<TableProps> = ({ handleInputChange }) => {
   return (
     <div>
       <table>
